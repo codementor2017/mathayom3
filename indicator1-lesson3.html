@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 — Designing the User Interface | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Lesson 3 of 40</div>
+  <div class="nav-buttons">
+    <a href="indicator1-lesson2.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator1-lesson4.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>🎨 Lesson 3 — Designing the User Interface</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 1</span>
+      <span>🗓️ Semester 1 · Midterm</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "Have you ever opened an app and instantly felt lost? You didn't know where to tap, or
+        which button to press. It felt frustrating, right?"
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        That frustration is the result of bad <strong>user interface</strong> design. A good
+        interface guides you gently toward your goal — like a well-marked trail through a forest.
+        In this lesson, you will learn what a user interface is, the five principles behind good
+        UI design, and how to sketch a clear screen for your own app.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.1 — Lesson Opener</span>
+        <small>Description: A warm parchment banner showing two phones side by side. Left phone: cluttered, confusing, tiny buttons, a cartoon user with a tangled line above their head. Right phone: clean, clear, big button, smiling user. Above them, "Confusing vs. Clear." Warm bronze and terracotta tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <p>By the end of this lesson, you will be able to:</p>
+      <ul class="goals-list">
+        <li>Explain what a <strong>user interface (UI)</strong> is and why it matters.</li>
+        <li>Apply the <strong>five UI design principles</strong>: simplicity, consistency, feedback, accessibility, and hierarchy.</li>
+        <li>Tell the difference between <strong>UI and UX</strong>.</li>
+        <li>Sketch a clean UI for your own app idea.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. What Is a User Interface?</h3>
+
+      <p>
+        The <strong>user interface (UI)</strong> is everything a person sees and touches when
+        they use an app. It includes the buttons, colors, text, images, sliders, icons, and the
+        layout of the screen. In other words, the UI is the "face" of your app.
+      </p>
+
+      <p>
+        The <strong>user experience (UX)</strong> is different — it is how the user <em>feels</em>
+        while using the app. A good UX feels smooth, fast, and satisfying. A bad UX feels
+        confusing, slow, and stressful.
+      </p>
+
+      <div class="callout">
+        <strong>Key idea:</strong> The UI is what the user <em>sees</em>. The UX is what the
+        user <em>feels</em>. You can't have good UX without good UI.
+      </div>
+
+      <p>
+        Imagine a phone with a beautiful screen but buttons that don't respond. The UI looks
+        fine — but the UX is terrible. Now imagine a phone with a plain screen but everything
+        works instantly. The UI is simple, but the UX is excellent. Great apps aim for both.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.2 — UI vs. UX</span>
+        <small>Description: Two cartoon figures side by side. Left figure labeled "UI" holds a paintbrush and a phone with colorful buttons — "What you see." Right figure labeled "UX" holds a heart and a happy user — "How you feel." Warm marble background, gold accents.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — UI or UX? <span class="time-tag">8 min</span></h4>
+        <p>Read each statement below. Write <strong>UI</strong> or <strong>UX</strong> next to it in your notebook.</p>
+        <ol>
+          <li>The color of the "Calculate" button.</li>
+          <li>How quickly the app opens when you tap it.</li>
+          <li>The size of the text on the screen.</li>
+          <li>How happy you feel after using the app.</li>
+          <li>The position of the "Send" button on a chat app.</li>
+          <li>Whether the app crashes when you tap the wrong thing.</li>
+        </ol>
+        <p>Compare with a partner. Which ones were tricky? Explain your reasoning.</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. The Five UI Design Principles</h3>
+
+      <p>Professional designers follow five principles to make interfaces clear and pleasant.</p>
+
+      <h4>1) Simplicity</h4>
+      <p>
+        Remove anything unnecessary. One screen should have <strong>one purpose</strong>. Too
+        many buttons, colors, or messages overwhelm the user. A simple screen lets the user
+        focus on what matters.
+      </p>
+
+      <h4>2) Consistency</h4>
+      <p>
+        Use the same colors, fonts, and button styles throughout the app. If the "Save" button
+        is green on one screen, it should be green on every screen. Consistency helps users
+        learn the app quickly.
+      </p>
+
+      <h4>3) Feedback</h4>
+      <p>
+        Always tell the user what happened. If they tap "Save," show a message like "Saved!"
+        If they enter a wrong value, show a red warning. Without feedback, users feel unsure.
+      </p>
+
+      <h4>4) Accessibility</h4>
+      <p>
+        Make the app usable for everyone — including people with poor eyesight or color
+        blindness. Use large fonts, clear contrast between text and background, and don't rely
+        on color alone to convey meaning.
+      </p>
+
+      <h4>5) Hierarchy</h4>
+      <p>
+        Put the most important information first. The title goes at the top, the main action
+        button stands out, and secondary options are smaller. Hierarchy guides the eye.
+      </p>
+
+      <div class="callout example">
+        <strong>Example — A good BMI Calculator UI:</strong>
+        <ul>
+          <li>Title: "BMI Calculator" (clear, at the top).</li>
+          <li>Two labeled inputs: "Weight (kg)" and "Height (m)".</li>
+          <li>One big "Calculate" button (obvious).</li>
+          <li>Output: "Your BMI is 22.0 — Normal" (with category).</li>
+          <li>Reset button (secondary, smaller).</li>
+        </ul>
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.3 — Five UI Principles</span>
+        <small>Description: Five mosaic panels arranged like a fan. Each panel shows one principle with a small icon: Simplicity (single stone button), Consistency (matching mosaic tiles), Feedback (green checkmark), Accessibility (large clear text), Hierarchy (title at top of a scroll, buttons below). Warm terracotta and gold palette.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Which Principle Is Missing? <span class="time-tag">10 min</span></h4>
+        <p>Each mini-scenario describes a UI problem. Write down which <strong>principle</strong> is broken.</p>
+        <ol>
+          <li>An app uses red for "Save" on one screen and blue on another.</li>
+          <li>You tap "Submit" but nothing happens — no message, no change.</li>
+          <li>The screen has twelve buttons, five colors, and no clear purpose.</li>
+          <li>All text is light gray on white, making it hard to read.</li>
+          <li>The "Delete Account" button is bigger and brighter than "Save."</li>
+        </ol>
+        <p>Share your answers with the class. Discuss: which principle do you think is the easiest to fix? Which is the hardest?</p>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. Sketching a UI</h3>
+
+      <p>
+        Before you code a screen, you should <strong>sketch it</strong>. Designers sketch on
+        paper because it is fast, cheap, and easy to change. A sketch (also called a
+        <em>wireframe</em>) shows the layout — where the buttons, inputs, and outputs go.
+      </p>
+
+      <p>A good sketch labels every element and shows the user flow — what happens after each tap.</p>
+
+      <p><strong>Steps to sketch a UI:</strong></p>
+      <ol>
+        <li>Draw a rectangle for the phone screen.</li>
+        <li>Place the title at the top.</li>
+        <li>Place the inputs below the title.</li>
+        <li>Place the main action button (the biggest one) in the middle.</li>
+        <li>Place the output below the button.</li>
+        <li>Add secondary buttons (like "Reset") at the bottom.</li>
+        <li>Label each element clearly.</li>
+      </ol>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> Use a pencil, not a pen. You will change your sketch many times
+        before you are happy with it. That is normal — even professional designers revise.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.4 — UI Sketch on Papyrus</span>
+        <small>Description: A cartoon papyrus sheet with a simple phone UI sketch. Elements labeled: title at top, two inputs in the middle, a large round button, an output line, a reset link at bottom. Colored styluses and a small ruler rest beside the paper. Warm parchment tones.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Sketch Your Own Screen <span class="time-tag">10 min</span></h4>
+        <p>Take a piece of paper. Sketch the main screen of the app idea you planned in Lesson 2.</p>
+        <p>Include:</p>
+        <ul>
+          <li>A <strong>title</strong> at the top.</li>
+          <li>All <strong>inputs</strong> the user needs to enter.</li>
+          <li>One clear <strong>action button</strong>.</li>
+          <li>An <strong>output area</strong>.</li>
+          <li>Any <strong>secondary buttons</strong> (like Reset, Help).</li>
+        </ul>
+        <p>Label every element with its purpose. When done, keep the sketch — you will refine it in the hands-on task.</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — Why Google's Search Page Is a Design Masterpiece</h3>
+
+      <p>
+        The Google search page has barely changed in over twenty years. Why? Because it already
+        follows every UI design principle perfectly.
+      </p>
+
+      <ul>
+        <li><strong>Simplicity:</strong> just one input box and one button. Nothing else.</li>
+        <li><strong>Consistency:</strong> the colors, logo, and layout are the same on every device.</li>
+        <li><strong>Feedback:</strong> when you type, suggestions appear instantly. When you press Enter, results load.</li>
+        <li><strong>Accessibility:</strong> large fonts, high contrast, works with screen readers.</li>
+        <li><strong>Hierarchy:</strong> the search box is the most prominent element — nothing competes with it.</li>
+      </ul>
+
+      <p>
+        Now compare this with a badly designed site cluttered with ads, pop-ups, and flashing
+        banners. Which one do you want to use again? Good design is not about looking fancy —
+        it is about respecting the user's attention.
+      </p>
+
+      <p>
+        <strong>Reflect:</strong> Think of an app you use that follows these principles. What
+        does it do well? Now think of one that does not. What would you change?
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.5 — Google Search vs. Cluttered Site</span>
+        <small>Description: Split cartoon. Left side: a minimalist search page with one input box and one button. Right side: a chaotic webpage with flashing ads, pop-ups, and tiny buttons. Labels above: "Clean UI" and "Cluttered UI." Warm parchment tones, playful contrast.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Design Your App's UI</h3>
+      <p>Using the sketch you started in Activity 3, create a <strong>clean final version</strong> on a new sheet of paper. Follow these rules:</p>
+      <ol>
+        <li>Use at least <strong>three colors</strong> (a main color, an accent, a background).</li>
+        <li>Label every element with its purpose.</li>
+        <li>Show the <strong>user flow</strong> with small arrows: what happens when the main button is tapped?</li>
+        <li>Make sure the font size is easy to read from a distance.</li>
+        <li>Check your design against the <strong>five UI principles</strong> — does it satisfy each one?</li>
+      </ol>
+      <p>When you finish, display your sketch on your desk. In the last few minutes, walk around the room and look at three other designs. Leave one sticky note of positive feedback on each.</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.6 — App UI Design Template</span>
+        <small>Description: A parchment template with a phone-shaped frame in the center. On the sides, small labeled boxes: "Title," "Input 1," "Input 2," "Main Button," "Output," "Reset." Arrows show where each element goes. A palette of color swatches at the bottom right. Warm parchment tones.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <p>Answer briefly in your notebook:</p>
+      <ol>
+        <li>In your own words, what is a user interface?</li>
+        <li>Which of the five UI principles do you think is the most important? Why?</li>
+        <li>What is the difference between UI and UX?</li>
+        <li>What is one thing you want to change about your sketch after seeing other students' designs?</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li>The <strong>UI</strong> is what the user sees; the <strong>UX</strong> is how they feel.</li>
+          <li>Five principles guide UI design: <strong>simplicity, consistency, feedback, accessibility, hierarchy</strong>.</li>
+          <li>Sketching on paper is the fastest way to design and improve a screen.</li>
+          <li>A well-designed UI guides the user gently toward their goal.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Choose one app you use daily. Redesign its main screen using the five UI principles. Draw your redesign on a fresh sheet of paper and bring it to the next class.</p>
+      <p>Then write a short paragraph (4–6 sentences) explaining what was wrong with the original design and how your redesign fixes it.</p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your UI sketch and redesign to the next class."</li>
+        <li>Example: "Review the five UI principles before Lesson 4."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator1-lesson2.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator1-lesson4.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

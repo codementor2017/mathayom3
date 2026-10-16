@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 — Cell Division Simulation | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Lesson 9 of 40</div>
+  <div class="nav-buttons">
+    <a href="indicator1-lesson8.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator1-lesson10.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>🧬 Lesson 9 — Cell Division Simulation</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 1</span>
+      <span>🗓️ Semester 1 · Midterm</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "You started as a single cell. Today you have trillions. How does one cell become two?
+        And how do those two become four? Every time your body heals a cut or grows a nail,
+        <strong>mitosis</strong> is happening."
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        In this lesson, you will combine biology with programming to build a
+        <strong>cell division simulation</strong>. It will walk through the four stages of
+        mitosis step by step, showing what happens to the chromosomes at each stage. This is a
+        real example of how apps help us learn science more clearly.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 9.1 — Lesson Opener</span>
+        <small>Description: A warm parchment banner showing a single stylized cell on the left, dividing into two identical cells on the right, connected by four small cartoon stages. A cartoon student sits with a tablet, coding the stages. A small Greek column and olive branch decorate the edges. Warm gold, green, and bronze tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <ul class="goals-list">
+        <li>Describe the four stages of <strong>mitosis</strong>.</li>
+        <li>Build a Python program that <strong>simulates cell division</strong>.</li>
+        <li>Use a <strong>loop</strong> to step through the stages.</li>
+        <li>Extend the simulation with timers, visuals, and user input.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. What Is Mitosis?</h3>
+
+      <p>
+        <strong>Mitosis</strong> is the process by which one cell divides into two identical
+        cells. It is how living things grow, heal, and replace old cells. Mitosis has four main
+        stages, often remembered as <strong>PMAT</strong>:
+      </p>
+
+      <ul>
+        <li><strong>Prophase:</strong> the chromosomes condense and become visible. The nuclear membrane begins to break down.</li>
+        <li><strong>Metaphase:</strong> the chromosomes line up along the middle of the cell.</li>
+        <li><strong>Anaphase:</strong> the chromosomes separate and move to opposite ends.</li>
+        <li><strong>Telophase:</strong> two new nuclei form; the cell begins to split into two.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Key fact:</strong> In humans, each cell starts with <strong>46 chromosomes</strong>.
+        After mitosis, each of the two new cells still has <strong>46 chromosomes</strong>. Mitosis
+        produces identical copies — no information is lost.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 9.2 — Mitosis Stages</span>
+        <small>Description: Four cartoon panels in a horizontal row, each showing a cell at a different stage: prophase (chromosomes condensing), metaphase (lining up in the middle), anaphase (separating to poles), telophase (two new nuclei forming). Above each panel is a small numbered scroll. Warm green, cream, and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — Order the Stages <span class="time-tag">8 min</span></h4>
+        <p>In your notebook, put the stages of mitosis in the correct order and write one sentence describing what happens at each stage.</p>
+        <p><strong>Stages (out of order):</strong> Telophase, Prophase, Anaphase, Metaphase.</p>
+        <p>Then answer: why is mitosis important for your body?</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. Using a Loop to Simulate Stages</h3>
+
+      <p>
+        A <strong>loop</strong> is a programming tool that repeats a set of instructions. Since
+        mitosis has four stages that happen in order, a loop is a perfect fit: we can store the
+        stages in a list and let the loop go through them one at a time.
+      </p>
+
+      <p>Here is the basic idea in Python:</p>
+
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace; font-size:0.92rem; overflow-x:auto;">
+stages = ["Prophase", "Metaphase", "Anaphase", "Telophase"]
+
+for i, stage in enumerate(stages):
+    print(f"Stage {i+1}: {stage}")
+    print(f"  Chromosomes are doing their job in {stage.lower()}...")
+
+print("Cell division complete. Two new cells formed.")</pre>
+
+      <p>Let's break down what happens:</p>
+      <ul>
+        <li><strong>List:</strong> <code>stages</code> holds the four stage names.</li>
+        <li><strong>Loop:</strong> <code>for</code> goes through each stage one at a time.</li>
+        <li><strong>enumerate:</strong> gives us both the position (0, 1, 2, 3) and the stage name.</li>
+        <li><strong>f-string:</strong> formats the output nicely.</li>
+      </ul>
+
+      <div class="callout example">
+        <strong>Output of the program:</strong><br>
+        Stage 1: Prophase<br>
+        Stage 2: Metaphase<br>
+        Stage 3: Anaphase<br>
+        Stage 4: Telophase<br>
+        Cell division complete. Two new cells formed.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 9.3 — Loop on Papyrus</span>
+        <small>Description: A cartoon papyrus scroll with the Python loop written in stylus. Small icons beside each stage name illustrate the action. A curved arrow at the bottom indicates the loop. Warm parchment tones.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Trace the Loop <span class="time-tag">10 min</span></h4>
+        <p>Trace the loop below and write what it prints.</p>
+        <pre style="background:#fdf8ea; padding:0.8rem; border-radius:8px; font-family:monospace; font-size:0.9rem;">
+seasons = ["Spring", "Summer", "Autumn", "Winter"]
+
+for i, season in enumerate(seasons):
+    print(f"{i+1}. {season} — enjoy the weather!")</pre>
+        <p>Then rewrite the loop so it stops after three seasons instead of four. (Hint: use a slice <code>seasons[:3]</code>.)</p>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. Adding Details to the Simulation</h3>
+
+      <p>
+        A basic simulation is fine, but we can make it much more informative by adding detail:
+        a description for each stage, and the number of chromosomes.
+      </p>
+
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace; font-size:0.9rem; overflow-x:auto;">
+stages = [
+    ("Prophase", "Chromosomes condense and become visible."),
+    ("Metaphase", "Chromosomes line up at the center."),
+    ("Anaphase", "Chromosomes separate and move to opposite poles."),
+    ("Telophase", "Two new nuclei form.")
+]
+
+chromosomes = 46
+
+for i, (stage, description) in enumerate(stages):
+    print(f"Stage {i+1}: {stage}")
+    print(f"  {description}")
+    print(f"  Chromosomes: {chromosomes}")
+
+print(f"Result: 2 cells, each with {chromosomes} chromosomes.")</pre>
+
+      <p>Now the simulation teaches something real — the science is visible.</p>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> When you build a simulation, always ask: "What would help the
+        user understand the concept better?" Sometimes a simple description or number makes
+        all the difference.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 9.4 — Detailed Simulation Output</span>
+        <small>Description: A cartoon tablet screen showing the output of the detailed simulation. Each stage is written clearly with its description and chromosome count. The final line shows "2 cells, each with 46 chromosomes." Warm parchment tones.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Add a Countdown <span class="time-tag">10 min</span></h4>
+        <p>Modify the simulation so that between each stage, the program prints a short pause message like:</p>
+        <pre style="background:#fdf8ea; padding:0.8rem; border-radius:8px; font-family:monospace; font-size:0.9rem;">
+...3...
+...2...
+...1...
+Next stage!</pre>
+        <p>You can use a nested loop or just three print statements per stage. Write your code in your notebook.</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — Comparing Mitosis and Meiosis</h3>
+
+      <p>
+        Mitosis produces <strong>two identical cells</strong>. But there is another kind of cell
+        division called <strong>meiosis</strong> — which produces <strong>four different
+        cells</strong>, each with <strong>half the chromosomes</strong>. Meiosis is how sperm
+        and egg cells are made.
+      </p>
+
+      <p>Here is a quick comparison:</p>
+
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>Mitosis</th>
+          <th>Meiosis</th>
+        </tr>
+        <tr><td>Number of cells produced</td><td>2</td><td>4</td></tr>
+        <tr><td>Chromosomes per cell</td><td>46 (same)</td><td>23 (half)</td></tr>
+        <tr><td>Identical or different?</td><td>Identical</td><td>Different</td></tr>
+        <tr><td>Where it happens</td><td>All body cells</td><td>Reproductive organs</td></tr>
+        <tr><td>Purpose</td><td>Growth and repair</td><td>Making sperm and egg cells</td></tr>
+      </table>
+
+      <p>
+        <strong>Reflect:</strong> If you were going to write a meiosis simulation, what would
+        you change in your mitosis program? How would the stages differ?
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 9.5 — Mitosis vs. Meiosis</span>
+        <small>Description: Split cartoon panel. Left side: mitosis — one cell becomes two identical cells. Right side: meiosis — one cell becomes four different cells, each with half the chromosomes. Labels above each side. Warm green and bronze tones.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Extend the Simulation</h3>
+      <p>Working in pairs, choose <strong>two</strong> of the following extensions to add to your simulation:</p>
+      <ol>
+        <li>Add a <strong>visual representation</strong> using text characters (e.g., show the chromosomes as small "X" shapes that move at each stage).</li>
+        <li>Add <strong>user input</strong> for the number of chromosomes so the simulation works for any species.</li>
+        <li>Add a <strong>comparison</strong> at the end that shows the differences between mitosis and meiosis.</li>
+        <li>Add a <strong>timer</strong> that shows how long each stage takes in real life (prophase ~30 min, metaphase ~10 min, etc.).</li>
+      </ol>
+      <p>Test your extended simulation with different inputs. Record the output in your notebook.</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 9.6 — Extended Simulation Output</span>
+        <small>Description: A cartoon tablet screen showing the extended simulation with visual X-shaped chromosomes moving through stages, a timer counting down, and a "Mitosis vs. Meiosis" comparison table at the end. Warm parchment tones.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <ol>
+        <li>Name the four stages of mitosis in order.</li>
+        <li>Why is a loop useful for simulating the stages?</li>
+        <li>What did you learn about science from building this program?</li>
+        <li>If you could add one more feature to your simulation, what would it be?</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li><strong>Mitosis</strong> has four stages: prophase, metaphase, anaphase, telophase.</li>
+          <li>A <strong>loop</strong> makes it easy to step through stages one by one.</li>
+          <li>Simulations can <strong>teach science concepts</strong> better than text alone.</li>
+          <li>Adding detail (descriptions, chromosome counts, timers) makes a simulation more useful.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Add a <strong>visual diagram</strong> to your cell division simulation. You can use simple text characters (like ▢ ▣ ◯ ✕) to show the cell and chromosomes at each stage.</p>
+      <p>Write a short paragraph (5–7 sentences) explaining how your simulation helps students understand mitosis.</p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your extended simulation to Lesson 10."</li>
+        <li>Example: "Review the four stages of mitosis and how loops work."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator1-lesson8.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator1-lesson10.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

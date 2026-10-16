@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 — Using Advanced Software and Online Tools | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Indicator 2 · Lesson 8 of 10</div>
+  <div class="nav-buttons">
+    <a href="indicator2-lesson7.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator2-lesson9.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>💻 Lesson 8 — Using Advanced Software and Online Tools</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 2</span>
+      <span>🗓️ Semester 1 · Final</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "You have 1,000 rows of survey responses. How long would it take to calculate averages
+        for each group by hand? Hours. But with a spreadsheet function, it takes five seconds."
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        Professional data analysts use advanced tools to process large datasets quickly. In
+        this lesson, you will learn three powerful techniques: <strong>advanced spreadsheet
+        functions</strong>, <strong>pivot tables</strong>, and <strong>online visualization
+        tools</strong>. These tools will save you hours and help you spot patterns that would
+        be invisible by hand.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.1 — Lesson Opener</span>
+        <small>Description: A warm parchment banner showing a student at a desk with a spreadsheet on a tablet. The screen shows many rows of data being magically summarized into a small summary table by glowing function formulas. A stopwatch icon shows "5 seconds." Warm bronze and parchment tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <ul class="goals-list">
+        <li>Use advanced spreadsheet functions: <strong>IF, VLOOKUP, COUNTIF, SUMIF</strong>.</li>
+        <li>Apply <strong>conditional formatting</strong> to highlight patterns.</li>
+        <li>Create a <strong>pivot table</strong> to summarize large datasets.</li>
+        <li>Use <strong>Datawrapper</strong> or <strong>Flourish</strong> to create interactive charts.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. Advanced Spreadsheet Functions</h3>
+
+      <p>
+        A spreadsheet is a grid of cells. Each cell has a value, and each value can be used in
+        a formula. Basic formulas like <code>=A1+A2</code> are useful, but the real power comes
+        from advanced functions.
+      </p>
+
+      <h4>IF — Make a Decision</h4>
+      <p>
+        The IF function checks a condition and returns one value if true, another if false.
+      </p>
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace; font-size:0.92rem;">
+=IF(A2>50, "Pass", "Fail")</pre>
+      <p>If A2 is greater than 50, the cell shows "Pass"; otherwise, it shows "Fail."</p>
+
+      <h4>COUNTIF — Count Matching Values</h4>
+      <p>COUNTIF counts how many cells meet a condition.</p>
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace; font-size:0.92rem;">
+=COUNTIF(A2:A100, ">50")</pre>
+      <p>This counts how many values in the range A2:A100 are greater than 50.</p>
+
+      <h4>SUMIF — Add Matching Values</h4>
+      <p>SUMIF adds up values that meet a condition.</p>
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace; font-size:0.92rem;">
+=SUMIF(A2:A100, ">50", B2:B100)</pre>
+      <p>This adds the B values where the A value is greater than 50.</p>
+
+      <h4>VLOOKUP — Find a Value from Another Table</h4>
+      <p>VLOOKUP searches for a value in one column and returns a value from another column.</p>
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace; font-size:0.92rem;">
+=VLOOKUP(A2, B:C, 2, FALSE)</pre>
+      <p>This finds A2 in column B and returns the value in column C.</p>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> Always test your formulas with small data first. If the formula
+        works with 5 rows, it will work with 500.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.2 — Four Advanced Functions</span>
+        <small>Description: Four small parchment panels in a 2×2 grid. Each panel shows one function with a small icon: IF (a forked path), COUNTIF (a counting hand), SUMIF (a plus sign), VLOOKUP (a magnifying glass over a table). Warm bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — Write the Formula <span class="time-tag">8 min</span></h4>
+        <p>Write the correct spreadsheet formula for each task. Assume your data is in cells A2:A100.</p>
+        <ol>
+          <li>Show "Yes" if A2 is greater than 30, otherwise show "No."</li>
+          <li>Count how many values in A2:A100 are equal to 5.</li>
+          <li>Sum all values in B2:B100 where A2:A100 equals "Math."</li>
+          <li>Look up a value in A2, find it in column D, and return the value from column E.</li>
+        </ol>
+        <p>Compare with a partner. Which formula was the trickiest?</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. Conditional Formatting and Pivot Tables</h3>
+
+      <h4>Conditional Formatting</h4>
+      <p>
+        Conditional formatting changes the appearance of a cell based on its value. For
+        example, you can highlight all scores below 60 in red, or all scores above 90 in green.
+        This makes patterns visible instantly.
+      </p>
+
+      <p><strong>How to use it (in Google Sheets):</strong></p>
+      <ol>
+        <li>Select the cells you want to format.</li>
+        <li>Go to <strong>Format → Conditional formatting</strong>.</li>
+        <li>Choose a rule (e.g., "Less than 60").</li>
+        <li>Choose a color.</li>
+        <li>Click Done.</li>
+      </ol>
+
+      <h4>Pivot Tables</h4>
+      <p>
+        A <strong>pivot table</strong> summarizes large data sets. For example, if you have
+        survey responses from 100 students, a pivot table can show you the average score for
+        each grade level in one click.
+      </p>
+
+      <p><strong>How to make one:</strong></p>
+      <ol>
+        <li>Select your data.</li>
+        <li>Go to <strong>Data → Pivot table</strong>.</li>
+        <li>Choose "Rows" (e.g., Grade Level) and "Values" (e.g., Average of Score).</li>
+        <li>The pivot table appears instantly.</li>
+      </ol>
+
+      <div class="callout example">
+        <strong>Example:</strong> A pivot table with rows = Grade Level, values = Average
+        Score, might show:
+        <ul>
+          <li>Grade 7 → 72</li>
+          <li>Grade 8 → 78</li>
+          <li>Grade 9 → 81</li>
+        </ul>
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.3 — Pivot Table Example</span>
+        <small>Description: A cartoon tablet screen showing a Google Sheet with 100 rows of data on the left and a small pivot table on the right (3 rows, 2 columns). The pivot table has a small gear icon beside it. Warm bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Plan Your Pivot Table <span class="time-tag">10 min</span></h4>
+        <p>Imagine you have a spreadsheet with the following columns: Student Name, Grade,
+          Gender, Favorite Subject, Hours of Study.</p>
+        <p>In your notebook, write what you would put in Rows and Values to answer each question:</p>
+        <ol>
+          <li>What is the average study hours per grade?</li>
+          <li>How many students chose each favorite subject?</li>
+          <li>What is the average study hours by gender?</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. Online Tools for Visualization</h3>
+
+      <p>
+        Two free online tools make it easy to create professional charts.
+      </p>
+
+      <h4>Datawrapper (datawrapper.de)</h4>
+      <p>
+        Datawrapper takes a spreadsheet and creates clean, professional charts in three steps:
+      </p>
+      <ol>
+        <li>Upload or paste your data.</li>
+        <li>Choose a chart type.</li>
+        <li>Customize (title, colors, labels).</li>
+      </ol>
+      <p>You can then embed the chart in a website or download it as an image.</p>
+
+      <h4>Flourish (flourish.studio)</h4>
+      <p>
+        Flourish creates animated and interactive charts. You can make a bar chart race, an
+        animated timeline, or a hoverable map. Flourish is especially good for presentations
+        that need to impress.
+      </p>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> Always keep a clean copy of your raw data. If you want to redo a
+        chart, you can upload the same data to a different tool.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.4 — Online Tools</span>
+        <small>Description: Two small parchment panels side by side. Left: a Datawrapper icon (a simple bar chart) with a "3-step" label. Right: a Flourish icon (an animated bar chart with a play button) with an "Interactive" label. Warm bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Choose Your Tool <span class="time-tag">10 min</span></h4>
+        <p>For each scenario, choose Datawrapper or Flourish and explain your choice.</p>
+        <ol>
+          <li>A clear, static bar chart of your survey results for a report.</li>
+          <li>An animated chart that shows your class's test scores changing over the semester.</li>
+          <li>A simple pie chart of favorite subjects.</li>
+          <li>An interactive timeline of historical events for a Social Studies project.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — How a Pivot Table Saved a Class Two Hours</h3>
+
+      <p>
+        A Grade 9 class collected a survey of 180 students about lunch preferences. Their
+        spreadsheet had 180 rows and 8 columns.
+      </p>
+
+      <p>Their teacher asked them to find:</p>
+      <ul>
+        <li>Average satisfaction per grade level.</li>
+        <li>Number of vegetarian-preferring students per grade.</li>
+        <li>Average spend per student.</li>
+      </ul>
+
+      <p>
+        Instead of calculating each by hand, the class built a pivot table with:
+      </p>
+      <ul>
+        <li><strong>Rows:</strong> Grade Level</li>
+        <li><strong>Values:</strong> Average Satisfaction, Count of Vegetarian Preference, Average Spend</li>
+      </ul>
+
+      <p>
+        The pivot table summarized all 180 responses in three rows in under 30 seconds.
+      </p>
+
+      <p>
+        Then they used <strong>conditional formatting</strong> to highlight the grade with the
+        highest satisfaction in green, and the one with the lowest in red.
+      </p>
+
+      <p>
+        Finally, they uploaded the summarized data to <strong>Datawrapper</strong> and created a
+        clean bar chart for their class presentation.
+      </p>
+
+      <p>
+        <strong>Reflect:</strong> What would have taken two hours of manual calculation took
+        only minutes. Why is it important to learn these tools now?
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.5 — Pivot Table Case Study</span>
+        <small>Description: A cartoon tablet screen showing a Google Sheet with 180 rows on the left and a 3-row pivot table on the right. Three grades (7, 8, 9) are shown with average satisfaction scores. Grade 9 is highlighted in green. Warm bronze tones.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Automate Your Data Processing</h3>
+      <p>Working in your group, use your survey data from Lesson 2 to apply these advanced tools:</p>
+      <ol>
+        <li>Use at least <strong>three advanced functions</strong> (IF, COUNTIF, SUMIF, or VLOOKUP). Record each formula in your notebook.</li>
+        <li>Create a <strong>pivot table</strong> that summarizes your data by one category (e.g., grade level, gender).</li>
+        <li>Apply <strong>conditional formatting</strong> to highlight the highest and lowest values in your summary.</li>
+        <li>Upload your summarized data to <strong>Datawrapper</strong> or <strong>Flourish</strong> and create one chart.</li>
+        <li>Write a short paragraph (4–5 sentences) explaining what you did and what you learned.</li>
+      </ol>
+      <p>Save your chart and paragraph — you will use them in Lesson 10.</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.6 — Automation Workflow</span>
+        <small>Description: A parchment workflow with four steps: (1) raw data, (2) advanced functions, (3) pivot table, (4) online chart. Arrows connect the steps. A small stopwatch beside the chart shows "fast!" Warm bronze tones.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <ol>
+        <li>What does COUNTIF do? Write an example.</li>
+        <li>What is a pivot table, and why is it useful?</li>
+        <li>What is the difference between Datawrapper and Flourish?</li>
+        <li>Which tool did you find most useful, and why?</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li>Advanced functions (<strong>IF, COUNTIF, SUMIF, VLOOKUP</strong>) make spreadsheets powerful.</li>
+          <li><strong>Conditional formatting</strong> reveals patterns visually.</li>
+          <li><strong>Pivot tables</strong> summarize large data sets in seconds.</li>
+          <li><strong>Datawrapper</strong> and <strong>Flourish</strong> create professional charts online.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Find a data set online (from a government site, news article, or sports site). Use
+        Datawrapper to create one chart from it. Save the chart image and bring it to the next
+        class.</p>
+      <p>Write a short paragraph explaining what the chart shows and why you chose that chart
+        type.</p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your Datawrapper chart to Lesson 9."</li>
+        <li>Example: "Review the four advanced spreadsheet functions."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator2-lesson7.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator2-lesson9.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7 — Building a Currency Converter | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Lesson 7 of 40</div>
+  <div class="nav-buttons">
+    <a href="indicator1-lesson6.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator1-lesson8.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>💱 Lesson 7 — Building a Currency Converter</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 1</span>
+      <span>🗓️ Semester 1 · Midterm</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "You are traveling to Japan with 5,000 Thai baht. How much can you spend in yen? How
+        do you know if the price of a bowl of ramen is fair?"
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        A currency converter app solves this in seconds. Today, you will build one — starting
+        with the logic in Python, then designing it as a real app. This is your first complete
+        app in this course, and it brings together everything you have learned about
+        requirements, design, logic, and testing.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 7.1 — Lesson Opener</span>
+        <small>Description: A warm parchment banner showing two clay tablets with "THB" and "USD" symbols. A cartoon student in a traveler's hat holds a tablet showing a currency conversion. Around them float coins with simple symbols. A balance scale sits between the two tablets. Warm terracotta and gold tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <ul class="goals-list">
+        <li>Design and build a working <strong>currency converter app</strong>.</li>
+        <li>Apply <strong>variables, conditions, and functions</strong> to a real program.</li>
+        <li>Test the app with <strong>multiple test cases</strong>, including edge cases.</li>
+        <li>Extend the app with new features.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. The Requirements — What Should the App Do?</h3>
+
+      <p>
+        Before we build anything, let's define the <strong>requirements</strong>. Requirements
+        are the answers to the question: "What does this app need to do?"
+      </p>
+
+      <p>For our currency converter, the requirements are:</p>
+      <ul>
+        <li><strong>Input 1:</strong> amount in Thai baht (THB).</li>
+        <li><strong>Input 2:</strong> the exchange rate (THB per USD).</li>
+        <li><strong>Action:</strong> divide THB by the rate to get USD.</li>
+        <li><strong>Output:</strong> the result in USD, formatted with two decimal places.</li>
+        <li><strong>Easy to use:</strong> one screen, one button.</li>
+      </ul>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> Always ask "What could go wrong?" before writing code. We will
+        handle the case where the exchange rate is zero in the testing section.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 7.2 — Requirements Checklist</span>
+        <small>Description: A parchment checklist with five items: "Input THB," "Input Rate," "Divide," "Show USD," "Easy to use." Each item has a small checkmark. Warm cream and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — Write Your Requirements <span class="time-tag">8 min</span></h4>
+        <p>In your notebook, write the <strong>requirements</strong> for a simple <em>tip calculator</em> app. Include:</p>
+        <ol>
+          <li>What the user inputs (at least two things).</li>
+          <li>What the app calculates.</li>
+          <li>What the app outputs.</li>
+          <li>One extra requirement that would make the app easier to use.</li>
+        </ol>
+        <p>Share with a partner. Did you both include the same requirements?</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. Writing the Logic in Python</h3>
+
+      <p>
+        Let's start by writing the logic as a Python function. This is the same function you
+        will later build visually in AppInventor.
+      </p>
+
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace; font-size:0.95rem; overflow-x:auto;">
+def convert(thb, rate):
+    return thb / rate
+
+# Get input from the user
+thb = float(input("Amount in THB: "))
+rate = float(input("Exchange rate (THB per USD): "))
+
+# Call the function
+usd = convert(thb, rate)
+
+# Show the result
+print("Amount in USD:", usd)</pre>
+
+      <p>Let's break it down:</p>
+      <ul>
+        <li><strong>Variables:</strong> <code>thb</code>, <code>rate</code>, <code>usd</code>.</li>
+        <li><strong>Function:</strong> <code>convert(thb, rate)</code> does one job — division.</li>
+        <li><strong>Event:</strong> the user runs the program (or taps a button in the app).</li>
+        <li><strong>Response:</strong> the program prints the converted amount.</li>
+      </ul>
+
+      <div class="callout example">
+        <strong>Example run:</strong><br>
+        Amount in THB: 1000<br>
+        Exchange rate: 35<br>
+        Amount in USD: 28.571428571428573
+      </div>
+
+      <p>Hmm — that's a lot of decimal places. We'll fix that in the testing step.</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 7.3 — Code on Papyrus</span>
+        <small>Description: A cartoon papyrus scroll showing the Python code in stylus writing. Small colored labels point to the variable declarations, function definition, and print statement. Warm tan and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Trace the Code <span class="time-tag">10 min</span></h4>
+        <p>Trace the function <code>convert(thb, rate)</code> for each input below. Write the output.</p>
+        <ol>
+          <li><code>convert(1000, 35)</code> → ____________</li>
+          <li><code>convert(500, 35)</code> → ____________</li>
+          <li><code>convert(350, 35)</code> → ____________</li>
+          <li><code>convert(0, 35)</code> → ____________</li>
+          <li><code>convert(1000, 0)</code> → ____________</li>
+        </ol>
+        <p>Which one is the problem? Why?</p>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. Improving the Code — Formatting and Edge Cases</h3>
+
+      <p>
+        Two improvements will make the app much more professional:
+      </p>
+
+      <h4>1) Format the output to two decimals</h4>
+      <p>In Python, use the format specifier <code>:.2f</code>:</p>
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace;">
+print(f"Amount in USD: {usd:.2f}")</pre>
+      <p>Now the output will look like: <code>Amount in USD: 28.57</code></p>
+
+      <h4>2) Handle the division-by-zero problem</h4>
+      <p>If the exchange rate is 0, Python will crash. Let's add a condition:</p>
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace;">
+def convert(thb, rate):
+    if rate == 0:
+        return None  # Return nothing if rate is zero
+    return thb / rate
+
+usd = convert(thb, rate)
+if usd is None:
+    print("Error: Exchange rate cannot be zero.")
+else:
+    print(f"Amount in USD: {usd:.2f}")</pre>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> Handling edge cases like this is what separates a beginner from a
+        professional. Every real app must think about what could go wrong.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 7.4 — Improved Code</span>
+        <small>Description: A cartoon papyrus scroll showing the improved Python code. Small illustrations beside the code: a checkmark next to the formatting line, and a warning triangle next to the zero-rate check. Warm parchment tones.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Add a Condition <span class="time-tag">10 min</span></h4>
+        <p>Modify the <code>convert</code> function so that if the input THB is negative, it returns the message "Invalid amount." Write the updated function in your notebook.</p>
+        <p><strong>Test it with:</strong> <code>convert(-100, 35)</code>. What does it return?</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — Testing the App with Real Values</h3>
+
+      <p>
+        A good developer tests every feature before sharing an app. Here are four real test
+        cases for our currency converter.
+      </p>
+
+      <table>
+        <tr>
+          <th>Test Case</th>
+          <th>Input THB</th>
+          <th>Rate</th>
+          <th>Expected Output</th>
+        </tr>
+        <tr><td>Case 1</td><td>1000</td><td>35</td><td>28.57 USD</td></tr>
+        <tr><td>Case 2</td><td>500</td><td>35</td><td>14.29 USD</td></tr>
+        <tr><td>Case 3</td><td>0</td><td>35</td><td>0.00 USD</td></tr>
+        <tr><td>Case 4 (edge)</td><td>1000</td><td>0</td><td>Error: rate cannot be zero</td></tr>
+      </table>
+
+      <p><strong>Why edge cases matter:</strong> Case 4 tests the boundary — a rate of zero. This rarely happens, but it can happen (for example, if the user leaves the field empty). Handling it gracefully prevents the app from crashing.</p>
+
+      <p><strong>Reflect:</strong> What other edge cases should we test? (Hint: what if the user enters letters instead of numbers?)</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 7.5 — Testing the App</span>
+        <small>Description: A cartoon student at a desk testing the currency converter on a tablet. Speech bubbles show test results: "1000 → 28.57", "500 → 14.29", "0 → 0.00", and one red bubble with "Error: rate = 0!" Warm parchment tones.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Build, Test, and Extend</h3>
+      <p>Follow these steps in your notebook or code editor.</p>
+      <ol>
+        <li><strong>Build:</strong> Write the Python version of the currency converter. Include the improved function with the zero-rate check.</li>
+        <li><strong>Test:</strong> Run the four test cases above. Write down the actual output for each. Does it match the expected output?</li>
+        <li><strong>Extend:</strong> Add one new feature:
+          <ul>
+            <li>Add a second currency (e.g., EUR or JPY) that uses a second rate.</li>
+            <li>Or: add a "reset" option that clears the inputs and lets you run again.</li>
+            <li>Or: format the output to include the currency label ("THB" or "USD").</li>
+          </ul>
+        </li>
+        <li><strong>Document:</strong> Write a short paragraph describing your extended app and how you tested it.</li>
+      </ol>
+      <p>If you finish early, sketch the app's screen (UI) on paper, showing where the inputs, button, and output go.</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 7.6 — Currency Converter UI</span>
+        <small>Description: A parchment sketch of a simple phone screen. Elements: title "Currency Converter," two labeled inputs (THB and Rate), a round "Convert" button, and an output line. A small "Reset" link at the bottom. Warm cream and bronze tones.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <ol>
+        <li>What was the most challenging part of building the app?</li>
+        <li>Why is it important to handle edge cases?</li>
+        <li>How does the currency converter use variables, functions, and conditions?</li>
+        <li>What would you add to the app if you had one more day to work on it?</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li>Every app starts with clear <strong>requirements</strong>.</li>
+          <li><strong>Functions</strong> keep code clean and reusable.</li>
+          <li><strong>Conditions</strong> handle edge cases and prevent crashes.</li>
+          <li><strong>Testing</strong> with multiple cases (including edge cases) makes an app reliable.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Finish your currency converter app. Add one more currency (e.g., EUR, JPY, or CNY).</p>
+      <p>Write a short paragraph (5–7 sentences) explaining:</p>
+      <ul>
+        <li>What the extended app does.</li>
+        <li>How you tested it.</li>
+        <li>What you learned from building and testing.</li>
+      </ul>
+      <p>Bring both the code and the paragraph to the next class.</p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your extended currency converter to Lesson 8."</li>
+        <li>Example: "Review how functions and conditions work together."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator1-lesson6.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator1-lesson8.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

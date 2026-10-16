@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 — Introduction to IoT | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Lesson 5 of 40</div>
+  <div class="nav-buttons">
+    <a href="indicator1-lesson4.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator1-lesson6.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>🌐 Lesson 5 — Introduction to the Internet of Things (IoT)</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 1</span>
+      <span>🗓️ Semester 1 · Midterm</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "What if your house could talk to you? What if the lights turned on before you walked
+        in, and the air conditioner cooled the room before you got home? What if a farm could
+        water its own plants based on the weather?"
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        All of this is possible through the <strong>Internet of Things (IoT)</strong> — a network
+        of everyday devices that collect and share data over the internet. In this lesson, you
+        will learn what IoT is, how it works, and how to design your own smart system.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 5.1 — Lesson Opener</span>
+        <small>Description: A warm parchment banner showing a cozy home with smart devices: a smart speaker on a shelf, a smart light glowing, a fitness tracker on a wrist, and Wi-Fi waves traveling up to a stylized cloud. A small robot vacuum waves from the floor. Warm terracotta and gold tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <ul class="goals-list">
+        <li>Define <strong>Internet of Things (IoT)</strong> in your own words.</li>
+        <li>Identify the <strong>three parts</strong> of every IoT system: sensors, connectivity, actuators.</li>
+        <li>Recognize common IoT devices in real life.</li>
+        <li>Design a basic IoT system for a real-world problem.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. What Is IoT?</h3>
+
+      <p>
+        <strong>IoT</strong> stands for <strong>Internet of Things</strong>. It means taking
+        ordinary objects — lights, watches, doors, plant pots — and connecting them to the
+        internet so they can <em>send information</em> and <em>take action</em> automatically.
+      </p>
+
+      <p>A "smart device" is any device that:</p>
+      <ul>
+        <li>Collects data from its surroundings.</li>
+        <li>Sends that data over a network.</li>
+        <li>Receives commands or shares information with other devices.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Big idea:</strong> IoT connects the <em>physical world</em> (things you can touch)
+        to the <em>digital world</em> (data and apps). Your smartwatch is a tiny computer that
+        talks to your phone. Your smart speaker listens and speaks back.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 5.2 — Physical Meets Digital</span>
+        <small>Description: A cartoon bridge between two islands. Left island: physical objects like a lamp, a plant, a door. Right island: digital cloud, data waves, and a phone. Small devices walk across the bridge. Warm cream and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — Smart Devices Around You <span class="time-tag">8 min</span></h4>
+        <p>List <strong>five smart devices</strong> you have seen in your home, school, or town. For each, write one sentence about what makes it "smart."</p>
+        <p>Example: <em>Smart TV — it connects to the internet and streams videos on demand.</em></p>
+        <p>Share your list with a partner. Which device surprised you the most? Why?</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. The Three Parts of an IoT System</h3>
+
+      <p>Every IoT system, no matter how simple or complex, has three essential parts.</p>
+
+      <h4>1) Sensors</h4>
+      <p>
+        Sensors collect data from the physical world. They measure things like temperature,
+        light, motion, humidity, or soil moisture. Examples: a thermometer, a motion detector,
+        a light sensor on your phone, a rain sensor.
+      </p>
+
+      <h4>2) Connectivity</h4>
+      <p>
+        Connectivity sends the sensor data to the internet. This can happen over Wi-Fi,
+        Bluetooth, mobile data (4G/5G), or a wired connection. Without connectivity, the
+        device is not part of IoT — it is just a standalone tool.
+      </p>
+
+      <h4>3) Actuators</h4>
+      <p>
+        Actuators take action based on the data. They can turn something on, move something, or
+        make a sound. Examples: a motor, a water pump, an LED light, a buzzer, a smart lock.
+      </p>
+
+      <div class="callout example">
+        <strong>Example — Smart home thermostat:</strong><br>
+        <em>Sensor:</em> temperature sensor reads 32°C.<br>
+        <em>Connectivity:</em> sends data over Wi-Fi to the AC controller.<br>
+        <em>Actuator:</em> the AC turns on to cool the room.<br>
+        <em>User:</em> receives a notification on their phone.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 5.3 — Three Parts of IoT</span>
+        <small>Description: Three mosaic panels in a row. Panel 1: an eye-shaped sensor labeled "Sensors." Panel 2: Wi-Fi waves and a cloud labeled "Connectivity." Panel 3: a motor or fan labeled "Actuators." A curved arrow connects the three. Warm terracotta and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Identify the Three Parts <span class="time-tag">10 min</span></h4>
+        <p>For each system below, write the <strong>sensor</strong>, <strong>connectivity</strong>, and <strong>actuator</strong>.</p>
+        <ol>
+          <li>A smart streetlight that turns on at night.</li>
+          <li>A smart doorbell that alerts you on your phone.</li>
+          <li>A smart irrigation system for a school garden.</li>
+          <li>A fitness tracker that counts your steps.</li>
+        </ol>
+        <p>Compare with a partner and share your answers with the class.</p>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. IoT in the Real World</h3>
+
+      <p>IoT is not just a theory — it already powers systems all around us.</p>
+
+      <table>
+        <tr>
+          <th>Domain</th>
+          <th>IoT Example</th>
+        </tr>
+        <tr><td>Smart Home</td><td>Smart lights, smart locks, smart speakers, smart thermostats</td></tr>
+        <tr><td>Smart Farm</td><td>Soil moisture sensors, automatic irrigation, weather stations</td></tr>
+        <tr><td>Smart Health</td><td>Fitness trackers, heart rate monitors, smart pill dispensers</td></tr>
+        <tr><td>Smart City</td><td>Smart traffic lights, smart parking, air quality sensors</td></tr>
+        <tr><td>Smart Industry</td><td>Machine monitoring, predictive maintenance</td></tr>
+      </table>
+
+      <p>
+        Every one of these systems follows the same pattern: <strong>sense → connect → act</strong>.
+        Once you understand that pattern, you can design your own IoT system for any problem.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 5.4 — IoT Domains</span>
+        <small>Description: Five small parchment panels in a row, each labeled with an IoT domain and a cartoon icon: Home (smart lamp), Farm (plant with sensor), Health (wrist with tracker), City (traffic light with Wi-Fi), Industry (factory gear). Warm bronze frames.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Design a Mini IoT System <span class="time-tag">10 min</span></h4>
+        <p>Pick one of these problems and design a simple IoT system.</p>
+        <ul>
+          <li>A classroom that alerts when the air is too warm.</li>
+          <li>A plant pot that tells you when it needs water.</li>
+          <li>A trash bin that says when it is full.</li>
+        </ul>
+        <p>In your notebook, write:</p>
+        <ol>
+          <li><strong>Sensor</strong> — what will you measure?</li>
+          <li><strong>Connectivity</strong> — how will it send data?</li>
+          <li><strong>Actuator</strong> — what action will it take?</li>
+          <li><strong>User</strong> — who receives the information?</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — A School Garden That Waters Itself</h3>
+
+      <p>
+        A school in Chiang Mai wanted to keep its garden healthy during the holidays — but no
+        one was there to water it. They installed a simple IoT system.
+      </p>
+
+      <p><strong>Step 1 — Sensors.</strong> A soil moisture sensor was placed in each garden bed. A rain sensor was placed on the roof. Both measured the environment every 10 minutes.</p>
+
+      <p><strong>Step 2 — Connectivity.</strong> The sensors sent their readings over Wi-Fi to a small controller in the school office.</p>
+
+      <p><strong>Step 3 — Processing.</strong> The controller checked: "Is soil moisture below 30% AND no rain in the last 2 hours?" If yes, it decided to water the plants.</p>
+
+      <p><strong>Step 4 — Actuator.</strong> A water pump turned on for 3 minutes, then turned off. A small LED on the controller lit up to show "watering in progress."</p>
+
+      <p><strong>Step 5 — User.</strong> The gardener received a daily summary on her phone: "Watered twice today. Soil moisture is now 45%."</p>
+
+      <p><strong>Result:</strong> The garden stayed healthy all summer, and the school saved water by only watering when needed.</p>
+
+      <p><strong>Reflect:</strong> What could go wrong with this system? What would happen if the Wi-Fi stopped working?</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 5.5 — School Garden IoT</span>
+        <small>Description: A cartoon school garden with olive plants, a soil moisture sensor in a pot, a small Wi-Fi hub on a column, a water pump, and a gardener holding a tablet with an alert. Labels point to each part. Warm sunny scene.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Design Your Own IoT System</h3>
+      <p>In groups of 3–4, choose a scenario and design a full IoT system.</p>
+      <p><strong>Choose one:</strong></p>
+      <ul>
+        <li>Smart classroom that adjusts lights and temperature.</li>
+        <li>Smart parking system that shows available spots.</li>
+        <li>Smart trash bin that alerts when full.</li>
+        <li>Smart health monitor for elderly people.</li>
+        <li>Smart farm that monitors soil and weather.</li>
+      </ul>
+      <p><strong>Design the following:</strong></p>
+      <ol>
+        <li>What sensors will you use? Why?</li>
+        <li>What connectivity? (Wi-Fi, Bluetooth, mobile data.)</li>
+        <li>What processing rules? (if / else statements.)</li>
+        <li>What actuators? What will they do?</li>
+        <li>What user interface? How does the user see the data?</li>
+      </ol>
+      <p>Draw your system on a large sheet of paper. Label every part. When you present, explain how the three parts work together.</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 5.6 — IoT System Design Template</span>
+        <small>Description: A parchment template with five labeled boxes: Sensors, Connectivity, Processing, Actuators, User Interface. Arrows show the flow from left to right. Blank lines for writing. A quill and small ink pot at the bottom right.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <ol>
+        <li>In one sentence, what is IoT?</li>
+        <li>Name the three parts of an IoT system.</li>
+        <li>What is the difference between a sensor and an actuator?</li>
+        <li>What is one benefit and one risk of IoT?</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li><strong>IoT</strong> connects everyday objects to the internet so they can sense, share, and act.</li>
+          <li>Every IoT system has three parts: <strong>sensors, connectivity, actuators</strong>.</li>
+          <li>IoT is already used in homes, farms, hospitals, cities, and factories.</li>
+          <li>Designing IoT systems begins with a real problem and a clear purpose.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Find <strong>one IoT device</strong> at home, school, or in your community.</p>
+      <p>Write a short paragraph (5–7 sentences) explaining:</p>
+      <ul>
+        <li>What the device does.</li>
+        <li>Its sensor(s), connectivity, and actuator(s).</li>
+        <li>Who uses it and why it is useful.</li>
+      </ul>
+      <p>Bring your paragraph to the next lesson.</p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your IoT system design to the next class."</li>
+        <li>Example: "Review the three parts of IoT before Lesson 6."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator1-lesson4.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator1-lesson6.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

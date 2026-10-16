@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 — IoT Sensors and Actuators | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Lesson 6 of 40</div>
+  <div class="nav-buttons">
+    <a href="indicator1-lesson5.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator1-lesson7.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>⚙️ Lesson 6 — IoT Sensors and Actuators</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 1</span>
+      <span>🗓️ Semester 1 · Midterm</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "How does your phone know to rotate the screen when you turn it sideways? How does a
+        smart doorbell know someone is at the door? How does a greenhouse know when to water
+        its plants?"
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        Behind every smart device is a pair of tiny heroes: a <strong>sensor</strong> that
+        notices something in the world, and an <strong>actuator</strong> that does something
+        about it. In this lesson, you will meet the most common sensors and actuators, learn
+        what each one does, and match them to real problems.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 6.1 — Lesson Opener</span>
+        <small>Description: A warm parchment banner showing two rows of small instruments. Top row (sensors): thermometer, wind vane, light-sensitive sundial, motion eye, soil probe, echo bell. Bottom row (actuators): oil lamp, small hammer, water wheel, marionette arm, sluice gate. A cartoon student points at both rows. Warm bronze and terracotta tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <ul class="goals-list">
+        <li>Identify <strong>six common sensors</strong> and describe what each one measures.</li>
+        <li>Identify <strong>five common actuators</strong> and describe what each one does.</li>
+        <li>Explain the difference between sensing and acting.</li>
+        <li>Match sensors and actuators to real-world problems.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. Sensors — The Eyes and Ears of IoT</h3>
+
+      <p>
+        A <strong>sensor</strong> is a device that measures something in the physical world and
+        turns it into data that a computer can read. Think of sensors as the "senses" of a smart
+        system — just like your eyes, ears, and skin tell your brain what is happening around you.
+      </p>
+
+      <h4>Six Common Sensors</h4>
+
+      <ul>
+        <li>
+          <strong>Temperature sensor</strong> — measures heat. Used in thermostats, weather
+          stations, and cooking appliances.
+        </li>
+        <li>
+          <strong>Humidity sensor</strong> — measures moisture in the air. Used in greenhouses,
+          weather apps, and drying machines.
+        </li>
+        <li>
+          <strong>Light sensor</strong> — measures brightness. Used in phone screens that dim
+          automatically and streetlights that turn on at night.
+        </li>
+        <li>
+          <strong>Motion sensor</strong> — detects movement. Used in security alarms and
+          automatic doors.
+        </li>
+        <li>
+          <strong>Soil moisture sensor</strong> — measures water in soil. Used in smart farms
+          and automatic irrigation systems.
+        </li>
+        <li>
+          <strong>Ultrasonic sensor</strong> — measures distance using sound waves. Used in car
+          parking sensors and robots.
+        </li>
+      </ul>
+
+      <div class="callout">
+        <strong>Key idea:</strong> Sensors do not "act" — they only <em>observe</em>. They turn
+        physical conditions into data.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 6.2 — Six Sensors</span>
+        <small>Description: Six small parchment cards in a 2×3 grid, each showing a sensor icon and a label: thermometer (Temperature), water droplet (Humidity), sun (Light), eye (Motion), plant with probe (Soil Moisture), and echo waves (Ultrasonic). Warm bronze borders, tan tones.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — Which Sensor? <span class="time-tag">8 min</span></h4>
+        <p>For each task below, write which <strong>sensor</strong> would be best.</p>
+        <ol>
+          <li>Detect if someone enters a room.</li>
+          <li>Know how hot it is outside.</li>
+          <li>Know if the air is dry or damp.</li>
+          <li>Turn on a light when it gets dark.</li>
+          <li>Measure the distance to a wall (for a robot).</li>
+          <li>Know if a plant needs water.</li>
+        </ol>
+        <p>Compare with a partner. Which sensors did you both choose? Which ones were harder to decide?</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. Actuators — The Hands of IoT</h3>
+
+      <p>
+        An <strong>actuator</strong> is a device that takes action. It receives a signal from
+        the system and does something physical — moves, lights up, makes a sound, or controls
+        another device.
+      </p>
+
+      <h4>Five Common Actuators</h4>
+
+      <ul>
+        <li>
+          <strong>LED</strong> — a small light that turns on and off. Used as indicators on
+          devices, displays, and smart lights.
+        </li>
+        <li>
+          <strong>Buzzer</strong> — produces sound. Used in alarms, notifications, and timers.
+        </li>
+        <li>
+          <strong>Motor</strong> — produces continuous spinning motion. Used in fans, robots,
+          and conveyor belts.
+        </li>
+        <li>
+          <strong>Servo</strong> — produces precise, controlled movement (like a small arm).
+          Used in robot arms, camera gimbals, and steering systems.
+        </li>
+        <li>
+          <strong>Relay</strong> — an electrical switch that turns high-power devices on or
+          off. Used in smart plugs, irrigation pumps, and industrial machines.
+        </li>
+      </ul>
+
+      <div class="callout example">
+        <strong>Example:</strong> A smart fan uses a <em>temperature sensor</em> to detect heat
+        and a <em>motor</em> (actuator) to spin the blades when it gets too warm.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 6.3 — Five Actuators</span>
+        <small>Description: Five small parchment cards in a row, each with an actuator icon and label: LED (small light bulb), Buzzer (bell with sound waves), Motor (spinning wheel), Servo (small articulated arm), Relay (electrical switch). Warm bronze borders.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Which Actuator? <span class="time-tag">10 min</span></h4>
+        <p>For each task below, write which <strong>actuator</strong> would be best.</p>
+        <ol>
+          <li>Turn on a lamp when it gets dark.</li>
+          <li>Sound an alarm when smoke is detected.</li>
+          <li>Open a door automatically when someone approaches.</li>
+          <li>Move a robot forward.</li>
+          <li>Water plants when the soil is dry.</li>
+          <li>Rotate a camera to follow a moving object.</li>
+        </ol>
+        <p>Share your answers with the class. Discuss: which actuator was easiest to match? Which was most surprising?</p>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. Sensors + Actuators = Smart Systems</h3>
+
+      <p>
+        Sensors alone only gather data. Actuators alone only react. When combined, they form
+        the heart of every smart system.
+      </p>
+
+      <p>Here are three examples that combine both:</p>
+
+      <table>
+        <tr>
+          <th>System</th>
+          <th>Sensor</th>
+          <th>Actuator</th>
+          <th>What It Does</th>
+        </tr>
+        <tr>
+          <td>Smart Fan</td>
+          <td>Temperature sensor</td>
+          <td>Motor</td>
+          <td>Turns on the fan when it's hot</td>
+        </tr>
+        <tr>
+          <td>Smart Garden</td>
+          <td>Soil moisture sensor</td>
+          <td>Relay + water pump</td>
+          <td>Waters plants when soil is dry</td>
+        </tr>
+        <tr>
+          <td>Smart Doorbell</td>
+          <td>Motion sensor + camera</td>
+          <td>Buzzer + LED</td>
+          <td>Rings and flashes when someone approaches</td>
+        </tr>
+      </table>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> When designing a smart system, always ask: "What should the sensor
+        detect?" and "What should the actuator do about it?" Once you can answer those two
+        questions, you have the core of your design.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 6.4 — Sensor + Actuator Combo</span>
+        <small>Description: A three-column parchment chart with rows for Smart Fan, Smart Garden, and Smart Doorbell. Each row shows a sensor icon on the left, an arrow, and an actuator icon on the right. Warm tan and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Design a Sensor-Actuator System <span class="time-tag">10 min</span></h4>
+        <p>Pick one problem below and design a mini system.</p>
+        <ul>
+          <li>A smart plant pot that waters itself.</li>
+          <li>A smart classroom that adjusts its lights.</li>
+          <li>A smart fan that turns on when it's hot.</li>
+          <li>A smart trash bin that alerts when it's full.</li>
+        </ul>
+        <p>In your notebook, write:</p>
+        <ol>
+          <li><strong>Sensor(s):</strong> What will it measure?</li>
+          <li><strong>Actuator(s):</strong> What will it do?</li>
+          <li><strong>Processing rule:</strong> When should the actuator activate? (Example: "if soil moisture &lt; 30%")</li>
+          <li><strong>User interface:</strong> How will the user know what's happening?</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — How a Smart Greenhouse Works</h3>
+
+      <p>
+        A smart greenhouse in Chiang Rai grows orchids. Orchids need exactly the right
+        temperature, humidity, and light. Here is how the greenhouse's IoT system keeps them
+        happy, 24 hours a day.
+      </p>
+
+      <p>
+        <strong>Sensors:</strong>
+      </p>
+      <ul>
+        <li>Temperature sensor — reads the air temperature every minute.</li>
+        <li>Humidity sensor — reads the moisture in the air.</li>
+        <li>Light sensor — measures how bright the sunlight is.</li>
+        <li>Soil moisture sensor — checks how wet the roots are.</li>
+      </ul>
+
+      <p>
+        <strong>Processing rules:</strong>
+      </p>
+      <ul>
+        <li>If temperature &gt; 32°C → turn on the fans.</li>
+        <li>If humidity &lt; 50% → turn on the mist sprayer.</li>
+        <li>If light &lt; 30% of ideal → turn on the grow lamps.</li>
+        <li>If soil moisture &lt; 40% → open the drip irrigation valve.</li>
+      </ul>
+
+      <p>
+        <strong>Actuators:</strong> fans (motors), mist sprayer (relay + pump), grow lamps
+        (relay), drip valve (servo).
+      </p>
+
+      <p>
+        <strong>User interface:</strong> The gardener sees a live dashboard on her phone showing
+        temperature, humidity, light, and moisture. She gets a daily summary and an alert only
+        when something goes wrong.
+      </p>
+
+      <p>
+        <strong>Result:</strong> The orchids bloomed on time, and the gardener checked her phone
+        instead of walking the greenhouse every hour.
+      </p>
+
+      <p>
+        <strong>Reflect:</strong> What sensors would you add to this greenhouse to make it even
+        smarter? What actuators could it use for pest control?
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 6.5 — Smart Greenhouse</span>
+        <small>Description: A cartoon smart greenhouse with orchids. Small sensors are visible: a thermometer, a humidity dial, a light meter, and a soil probe. Small fans, a mist sprayer, and a grow lamp are also shown. A gardener in the corner looks at a tablet dashboard. Warm greens, bronze, and cream tones.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Design Your Own Smart System</h3>
+      <p>In pairs, choose a scenario and design a full sensor-actuator system.</p>
+      <p><strong>Choose one:</strong></p>
+      <ul>
+        <li>A smart bed that adjusts its firmness.</li>
+        <li>A smart shoe rack that dries wet shoes.</li>
+        <li>A smart backpack that warns you if you forgot something.</li>
+        <li>A smart pet feeder that gives food on a schedule and when the pet is hungry.</li>
+      </ul>
+      <p><strong>Design the following on a large sheet of paper:</strong></p>
+      <ol>
+        <li>Sensor(s) and what they measure.</li>
+        <li>Processing rules (using if / else).</li>
+        <li>Actuator(s) and what they do.</li>
+        <li>User interface (how the user sees what's happening).</li>
+        <li>One risk (what could go wrong with the system).</li>
+      </ol>
+      <p>When finished, present your design to another pair. Give each other feedback using the phrase: <em>"One thing I like is... One thing I would improve is..."</em></p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 6.6 — Smart System Design Template</span>
+        <small>Description: A parchment template with five labeled boxes: Sensors, Processing Rules, Actuators, User Interface, Risk. Arrows show the flow from left to right. Blank lines for writing. A quill and small ink pot at the bottom right.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <ol>
+        <li>Name three sensors and what each one measures.</li>
+        <li>Name three actuators and what each one does.</li>
+        <li>What is the difference between a sensor and an actuator?</li>
+        <li>Describe one smart system you would like to build and why.</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li><strong>Sensors</strong> observe the world and turn physical data into digital signals.</li>
+          <li><strong>Actuators</strong> take action based on those signals.</li>
+          <li>Common sensors: temperature, humidity, light, motion, soil moisture, ultrasonic.</li>
+          <li>Common actuators: LED, buzzer, motor, servo, relay.</li>
+          <li>Smart systems combine sensors + processing + actuators + a user interface.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Find <strong>five sensors</strong> in devices around your home. For each one, write what it measures and what the device does with that information.</p>
+      <p>Example: <em>A microwave has a temperature sensor. It detects when the food is hot and turns off automatically.</em></p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your smart system design to the next class."</li>
+        <li>Example: "Review sensors and actuators before Lesson 7."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator1-lesson5.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator1-lesson7.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

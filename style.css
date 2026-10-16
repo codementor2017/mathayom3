@@ -1,0 +1,1107 @@
+/* ============================================================
+   Mathayom 3 (Grade 9) — Complete 40-Lesson Unit
+   MYTHOLOGY THEME (Greek · Norse · Egyptian · Arthurian)
+   Original cartoon style — no copyrighted adaptations
+   Palette: Parchment, Bronze, Marble, Laurel, Lapis, Gold
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Georgia', 'Palatino', serif;
+}
+
+body {
+  background: #f6efe0;
+  background-image:
+    radial-gradient(circle at 12% 15%, #fdf6e3 0%, transparent 35%),
+    radial-gradient(circle at 88% 85%, #efe2c4 0%, transparent 40%),
+    repeating-linear-gradient(45deg, #f6efe0 0px, #f6efe0 3px, #f1e7d2 3px, #f1e7d2 9px);
+  color: #3a2a1a;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* ---------- Top Navigation Bar (sticky) ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #2c1e12;
+  border-bottom: 4px solid #c9a227;
+  box-shadow: 0 6px 0 #1a1108, 0 10px 18px rgba(0,0,0,0.25);
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.top-nav .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #f5e6c8;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 0 #0d0704;
+}
+
+.top-nav .nav-brand .laurel-icon {
+  font-size: 1.5rem;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e8c977;
+  color: #2c1e12;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 30px;
+  border: 2px solid #2c1e12;
+  box-shadow: 0 4px 0 #2c1e12;
+  transition: 0.12s ease;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #f5d98a;
+  transform: translateY(-2px);
+}
+
+.nav-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #2c1e12;
+}
+
+.nav-btn.home-btn {
+  background: #8b5e34;
+  color: #f5e6c8;
+}
+.nav-btn.home-btn:hover { background: #a97446; }
+
+.nav-btn.prev-btn {
+  background: #a3b18a;
+  color: #2c1e12;
+}
+.nav-btn.prev-btn:hover { background: #b8c59f; }
+
+.nav-btn.next-btn {
+  background: #6f8fa8;
+  color: #f5e6c8;
+}
+.nav-btn.next-btn:hover { background: #85a4bd; }
+
+.nav-btn.disabled {
+  background: #c7bda8;
+  color: #8a7f6a;
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: 0 4px 0 #a89c85;
+  pointer-events: none;
+}
+
+/* ---------- Page Wrapper (parchment scroll) ---------- */
+.page-wrapper {
+  max-width: 1300px;
+  margin: 1.5rem auto 3rem;
+  background: #fdf8ea;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(201, 162, 39, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(139, 94, 52, 0.05) 0%, transparent 40%);
+  border-radius: 24px;
+  padding: 2rem 2rem 1.5rem;
+  box-shadow: 0 12px 0 #8b5e34, 0 16px 30px rgba(0, 0, 0, 0.15);
+  border: 3px solid #c9a227;
+  position: relative;
+}
+
+/* Greek key (meander) top border */
+.page-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -3px; left: -3px; right: -3px;
+  height: 12px;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      #8b5e34 0px, #8b5e34 6px,
+      transparent 6px, transparent 12px,
+      #8b5e34 12px, #8b5e34 18px,
+      transparent 18px, transparent 24px
+    );
+  border-radius: 24px 24px 0 0;
+  opacity: 0.6;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #5c3d1e;
+  text-shadow: 3px 3px 0 #e8c977, 1px 1px 0 #2c1e12;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-family: 'Georgia', 'Palatino', serif;
+  font-weight: 900;
+  word-break: break-word;
+}
+
+h1::before { content: "🏛️ "; }
+h1::after { content: " 🏛️"; }
+
+.subhead {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fdf8ea;
+  background: #5c3d1e;
+  display: inline-block;
+  padding: 0.6rem 2.5rem;
+  border-radius: 30px;
+  box-shadow: 0 6px 0 #2c1e12;
+  border: 2px dashed #e8c977;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.center { text-align: center; }
+
+/* ---------- Term Introduction Block ---------- */
+.term-intro {
+  background: linear-gradient(135deg, #fdf8ea 0%, #f5e6c8 100%);
+  border: 3px solid #c9a227;
+  border-left: 12px solid #8b5e34;
+  border-radius: 18px;
+  padding: 1.8rem 2rem 1.5rem;
+  margin: 2rem 0 1.5rem;
+  position: relative;
+  box-shadow: 0 6px 0 #8b5e34, 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.term-badge {
+  display: inline-block;
+  background: #8b5e34;
+  color: #f5e6c8;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.5rem 1.4rem;
+  border-radius: 30px;
+  border: 2px solid #2c1e12;
+  box-shadow: 0 4px 0 #2c1e12;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+  font-family: 'Georgia', serif;
+}
+
+.term-intro h2 {
+  font-size: 1.9rem;
+  color: #5c3d1e;
+  margin-bottom: 0.9rem;
+  font-family: 'Georgia', serif;
+  border-bottom: 3px dashed #c9a227;
+  padding-bottom: 0.6rem;
+}
+
+.term-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #3a2a1a;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 1rem 1.3rem;
+  border-radius: 14px;
+  border-left: 6px solid #6f8fa8;
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- Learning Outcome Block ---------- */
+.outcome-block {
+  background: #f0f5ec;
+  border: 2px dashed #a3b18a;
+  border-radius: 16px;
+  padding: 1.2rem 1.6rem;
+  margin-top: 1rem;
+}
+
+.outcome-block h3 {
+  color: #4a5d38;
+  font-size: 1.25rem;
+  margin-bottom: 0.7rem;
+  border-left: 8px solid #a3b18a;
+  padding-left: 0.8rem;
+  font-family: 'Georgia', serif;
+}
+
+.outcome-block ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.outcome-block ul li {
+  background: #fdf8ea;
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #c5d3b8;
+  font-size: 0.98rem;
+  color: #3a2a1a;
+  line-height: 1.55;
+  position: relative;
+  box-shadow: 0 2px 0 #d8e2cd;
+}
+
+.outcome-block ul li::before {
+  content: "📜";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.05rem;
+}
+
+/* ---------- Index Grid ---------- */
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.6rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.indicator-card {
+  background: #fdf8ea;
+  border-radius: 18px;
+  border: 3px solid #c9a227;
+  box-shadow: 0 8px 0 #8b5e34, 0 12px 18px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1rem 1.2rem;
+  transition: 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.indicator-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 10px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #8b5e34 0px, #8b5e34 8px,
+      #c9a227 8px, #c9a227 16px
+    );
+  opacity: 0.9;
+}
+
+.indicator-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 0 #8b5e34, 0 18px 24px rgba(0, 0, 0, 0.15);
+}
+
+.indicator-card h2 {
+  font-size: 1.25rem;
+  background: #5c3d1e;
+  padding: 0.5rem 0.9rem;
+  border-radius: 12px;
+  color: #e8c977;
+  margin: 0.8rem 0 0.8rem;
+  border: 2px solid #2c1e12;
+  align-self: flex-start;
+  font-family: 'Georgia', serif;
+}
+
+.indicator-card p {
+  font-size: 0.98rem;
+  margin: 0.5rem 0 0.8rem;
+  background: #f0f5ec;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  color: #3a2a1a;
+  border-left: 6px solid #a3b18a;
+  font-weight: 600;
+}
+
+.lesson-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.4rem;
+  flex: 1;
+}
+
+.lesson-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fdf8ea;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #5c3d1e;
+  font-weight: 700;
+  font-size: 0.93rem;
+  border: 1.5px solid #c9a227;
+  transition: 0.1s;
+  box-shadow: 0 2px 0 #8b5e34;
+}
+
+.lesson-links li a:hover {
+  background: #f5e6c8;
+  transform: translateX(4px);
+}
+
+.lesson-links li a::before {
+  content: "⚱️";
+  font-size: 1rem;
+}
+
+.badge {
+  background: #a3b18a;
+  border-radius: 30px;
+  padding: 0.3rem 1.2rem;
+  font-weight: 800;
+  font-size: 0.88rem;
+  align-self: flex-end;
+  color: #fdf8ea;
+  border: 2px solid #2c1e12;
+  margin-top: 0.6rem;
+  display: inline-block;
+}
+
+/* ---------- Lesson Page ---------- */
+.lesson-page {
+  background: #fdf8ea;
+  border-radius: 18px;
+  padding: 2rem;
+  border: 3px solid #c9a227;
+  box-shadow: inset 0 0 0 6px #f5e6c8, 0 10px 0 #8b5e34;
+  margin-top: 1rem;
+}
+
+.lesson-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  background: #5c3d1e;
+  padding: 0.9rem 1.5rem;
+  border-radius: 40px;
+  border: 3px solid #c9a227;
+  gap: 1rem;
+}
+
+.lesson-header h2 {
+  font-size: 1.6rem;
+  color: #e8c977;
+  text-shadow: 1px 1px 0 #2c1e12;
+  flex: 1;
+  font-family: 'Georgia', serif;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  background: #fdf8ea;
+  border-radius: 16px;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.8rem;
+  border: 2px solid #ddc98a;
+  box-shadow: 0 5px 0 #efe0b5;
+}
+
+.section h3 {
+  font-size: 1.45rem;
+  color: #5c3d1e;
+  border-left: 10px solid #8b5e34;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  font-family: 'Georgia', serif;
+}
+
+.section h3 span { font-size: 1.7rem; }
+
+.section h4 {
+  font-size: 1.15rem;
+  color: #5c3d1e;
+  margin: 1rem 0 0.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.section p, .section li {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #3a2a1a;
+  margin-bottom: 0.5rem;
+}
+
+.section ul, .section ol {
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.section ul li, .section ol li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---------- Vocabulary Box (papyrus) ---------- */
+.vocab-box {
+  background: #f5e6c8;
+  border: 2px dashed #8b5e34;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.vocab-box h4 {
+  color: #5c3d1e;
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  font-family: 'Georgia', serif;
+}
+
+.vocab-box ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-left: 0;
+}
+
+.vocab-box ul li {
+  background: #fdf8ea;
+  border: 1.5px solid #c9a227;
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: #5c3d1e;
+}
+
+/* ---------- Materials Box ---------- */
+.materials-box {
+  background: #f0f5ec;
+  border: 2px solid #a3b18a;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.materials-box h4 { color: #4a5d38; margin-bottom: 0.5rem; }
+.materials-box ul { padding-left: 1.5rem; }
+
+/* ---------- Objective Box (marble tablet) ---------- */
+.objective-box {
+  background: #f0f5ec;
+  border: 2px solid #6f8fa8;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 3px 0 #c5d3b8;
+}
+
+.objective-box h4 { color: #3d5466; margin-bottom: 0.5rem; font-family: 'Georgia', serif; }
+.objective-box ol, .objective-box ul { padding-left: 1.5rem; }
+
+/* ---------- Part Card ---------- */
+.part-card {
+  background: #fdf8ea;
+  border: 2px solid #c9a227;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 0 #efe0b5;
+}
+
+.part-card h4 {
+  background: #6f8fa8;
+  color: #fdf8ea;
+  padding: 0.4rem 1.2rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  border: 2px solid #2c1e12;
+  font-family: 'Georgia', serif;
+}
+
+/* ---------- Image Placeholder (hieroglyph panel) ---------- */
+.image-placeholder {
+  background: #f5e6c8;
+  border: 3px dashed #8b5e34;
+  border-radius: 18px;
+  padding: 1.6rem 1rem;
+  margin: 1.2rem 0;
+  text-align: center;
+  color: #5c3d1e;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: inset 0 0 0 6px #fdf8ea;
+  min-height: 160px;
+  justify-content: center;
+}
+
+.image-placeholder::before {
+  content: "🏺";
+  font-size: 2.6rem;
+  opacity: 0.85;
+}
+
+.image-placeholder .img-label {
+  font-weight: 800;
+  color: #fdf8ea;
+  font-size: 1.02rem;
+  background: #8b5e34;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  border: 2px solid #2c1e12;
+  font-family: 'Georgia', serif;
+}
+
+.image-placeholder small {
+  font-weight: 400;
+  color: #6b5334;
+  font-style: italic;
+  background: #fdf8ea;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  max-width: 92%;
+  line-height: 1.55;
+  border: 1px solid #ddc98a;
+}
+
+/* ---------- Assessment Box ---------- */
+.assessment-box {
+  background: #f0e8f5;
+  border: 2px solid #a68bc7;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.assessment-box h4 { color: #5a3d7a; margin-bottom: 0.5rem; font-family: 'Georgia', serif; }
+.assessment-box ul { padding-left: 1.5rem; }
+
+/* ---------- Teacher Announce (wax tablet) ---------- */
+.teacher-announce {
+  background: #f5e6c8;
+  border-radius: 18px;
+  border: 3px solid #8b5e34;
+  padding: 1.8rem 1.8rem 1.2rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 0 #5c3d1e;
+  position: relative;
+}
+
+.teacher-announce::before {
+  content: "";
+  position: absolute;
+  top: -3px; left: -3px; right: -3px;
+  height: 10px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #8b5e34 0px, #8b5e34 8px,
+      #c9a227 8px, #c9a227 16px
+    );
+  border-radius: 18px 18px 0 0;
+  opacity: 0.85;
+}
+
+.teacher-announce h4 {
+  font-size: 1.5rem;
+  color: #5c3d1e;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.9rem;
+  margin-top: 0.3rem;
+  font-family: 'Georgia', serif;
+}
+
+.teacher-announce ul { list-style: none; padding-left: 0.5rem; }
+
+.teacher-announce li {
+  background: #fdf8ea;
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem 0.8rem 2.8rem;
+  border-radius: 12px;
+  border: 1.5px solid #c9a227;
+  font-size: 1.02rem;
+  position: relative;
+  box-shadow: 0 3px 0 #ddc98a;
+  color: #3a2a1a;
+  line-height: 1.55;
+}
+
+.teacher-announce li::before {
+  content: "📜";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+}
+
+/* ---------- Bottom Navigation ---------- */
+.bottom-nav {
+  max-width: 1300px;
+  margin: 1.5rem auto 2rem;
+  background: #2c1e12;
+  border-radius: 40px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  border: 3px solid #c9a227;
+  box-shadow: 0 8px 0 #1a1108, 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.bottom-nav .nav-btn {
+  font-size: 1.02rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.bottom-nav .nav-label {
+  color: #e8c977;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  font-family: 'Georgia', serif;
+}
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: #fdf8ea;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 0 #ddc98a;
+}
+
+table th {
+  background: #5c3d1e;
+  color: #e8c977;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border: 2px solid #2c1e12;
+  font-size: 0.98rem;
+  font-family: 'Georgia', serif;
+}
+
+table td {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddc98a;
+  font-size: 0.96rem;
+  color: #3a2a1a;
+}
+
+table tr:nth-child(even) td { background: #f5e6c8; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  h1 { font-size: 2rem; }
+  .page-wrapper { padding: 1rem; border-radius: 16px; margin: 0.8rem; }
+  .lesson-header h2 { font-size: 1.2rem; }
+  .section h3 { font-size: 1.15rem; }
+  .lesson-page { padding: 1rem; border-radius: 12px; }
+  .section { padding: 1rem; }
+  .subhead { font-size: 1rem; padding: 0.5rem 1.2rem; }
+  .nav-btn { font-size: 0.85rem; padding: 0.45rem 0.9rem; }
+  .bottom-nav { border-radius: 20px; padding: 0.8rem 1rem; }
+  .bottom-nav .nav-btn { font-size: 0.88rem; padding: 0.6rem 1rem; }
+  .bottom-nav .nav-label { min-width: 100%; font-size: 0.88rem; }
+  .term-intro { padding: 1.2rem 1rem; }
+  .term-intro h2 { font-size: 1.3rem; }
+  .term-lead { font-size: 0.96rem; padding: 0.8rem 1rem; }
+  .outcome-block { padding: 0.9rem 1rem; }
+  .outcome-block h3 { font-size: 1.05rem; }
+  .outcome-block ul li { font-size: 0.9rem; padding: 0.5rem 0.8rem 0.5rem 2.2rem; }
+}
+/* ---------- Student Reading Section ---------- */
+.student-reading {
+  background: #fdfaf0;
+  border: 3px solid #c9a227;
+  border-left: 12px solid #6f8fa8;
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 6px 0 #d6c08a;
+}
+
+.student-reading h3 {
+  font-size: 1.5rem;
+  color: #3d5466;
+  border-left: 10px solid #6f8fa8;
+  padding-left: 1rem;
+  margin-bottom: 1.2rem;
+  font-family: 'Georgia', serif;
+}
+
+.student-reading h4 {
+  font-size: 1.15rem;
+  color: #5c3d1e;
+  margin: 1.3rem 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px dashed #ddc98a;
+  font-family: 'Georgia', serif;
+}
+
+.student-reading p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #3a2a1a;
+  margin-bottom: 0.8rem;
+}
+
+.student-reading ul,
+.student-reading ol {
+  padding-left: 1.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.student-reading ul li,
+.student-reading ol li {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #3a2a1a;
+  margin-bottom: 0.5rem;
+}
+
+.student-reading table {
+  margin: 1rem 0 1.3rem;
+}
+
+.student-reading em {
+  color: #6b5334;
+  font-style: italic;
+}
+
+.student-reading strong {
+  color: #5c3d1e;
+}
+/* ============================================================
+   STUDENT TEXTBOOK STYLES
+   ============================================================ */
+
+.lesson-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  background: #f5e6c8;
+  border: 2px solid #c9a227;
+  border-radius: 14px;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #5c3d1e;
+  font-weight: 700;
+}
+.lesson-meta-bar span {
+  background: #fdf8ea;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid #ddc98a;
+}
+
+.opener-box {
+  background: linear-gradient(135deg, #fdf8ea 0%, #f5e6c8 100%);
+  border: 3px solid #8b5e34;
+  border-radius: 18px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 6px 0 #5c3d1e;
+  position: relative;
+}
+
+.opener-box .hook {
+  font-size: 1.35rem;
+  font-style: italic;
+  color: #5c3d1e;
+  border-left: 8px solid #c9a227;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+}
+
+.goals-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.goals-list li {
+  background: #fdf8ea;
+  padding: 0.6rem 1rem 0.6rem 2.7rem;
+  border-radius: 12px;
+  border: 1px solid #c5d3b8;
+  font-size: 1rem;
+  position: relative;
+  color: #3a2a1a;
+  line-height: 1.55;
+}
+.goals-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4a5d38;
+  font-weight: 900;
+  font-size: 1.15rem;
+}
+
+.reading-section {
+  background: #fdfaf0;
+  border: 2px solid #ddc98a;
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.6rem;
+  box-shadow: 0 4px 0 #efe0b5;
+}
+
+.reading-section h3 {
+  font-size: 1.5rem;
+  color: #5c3d1e;
+  border-bottom: 3px solid #c9a227;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.reading-section h4 {
+  font-size: 1.15rem;
+  color: #6f8fa8;
+  margin: 1.3rem 0 0.6rem;
+  font-family: 'Georgia', serif;
+}
+
+.reading-section p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #3a2a1a;
+  margin-bottom: 0.9rem;
+}
+
+.reading-section ul,
+.reading-section ol {
+  padding-left: 1.8rem;
+  margin-bottom: 1rem;
+}
+.reading-section ul li,
+.reading-section ol li {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #3a2a1a;
+  margin-bottom: 0.5rem;
+}
+
+.reading-section .callout {
+  background: #f0f5ec;
+  border-left: 6px solid #a3b18a;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #3a2a1a;
+}
+.reading-section .callout strong {
+  color: #4a5d38;
+}
+.reading-section .callout.example {
+  background: #fdf3e0;
+  border-left-color: #c9a227;
+}
+.reading-section .callout.example strong {
+  color: #8b5e34;
+}
+.reading-section .callout.tip {
+  background: #eaf1f7;
+  border-left-color: #6f8fa8;
+}
+.reading-section .callout.tip strong {
+  color: #3d5466;
+}
+
+.activity-box {
+  background: #fff9e6;
+  border: 3px dashed #c9a227;
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  margin: 1.4rem 0 1.8rem;
+  position: relative;
+}
+.activity-box::before {
+  content: "✏️ ACTIVITY";
+  position: absolute;
+  top: -14px;
+  left: 1.2rem;
+  background: #8b5e34;
+  color: #f5e6c8;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.25rem 0.9rem;
+  border-radius: 12px;
+  letter-spacing: 1px;
+}
+.activity-box h4 {
+  color: #5c3d1e;
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.3rem;
+  font-family: 'Georgia', serif;
+}
+.activity-box p,
+.activity-box li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3a2a1a;
+}
+.activity-box ol,
+.activity-box ul {
+  padding-left: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+.activity-box .time-tag {
+  display: inline-block;
+  background: #6f8fa8;
+  color: #fdf8ea;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  margin-left: 0.4rem;
+}
+
+.case-study {
+  background: #f5ecd8;
+  border: 2px solid #8b5e34;
+  border-radius: 16px;
+  padding: 1.6rem 1.8rem;
+  margin: 1.6rem 0;
+}
+.case-study h3 {
+  color: #5c3d1e;
+  font-size: 1.35rem;
+  margin-bottom: 0.9rem;
+  font-family: 'Georgia', serif;
+}
+.case-study p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #3a2a1a;
+  margin-bottom: 0.7rem;
+}
+
+.hands-on {
+  background: #eaf1f7;
+  border: 3px solid #6f8fa8;
+  border-radius: 16px;
+  padding: 1.6rem 1.8rem;
+  margin: 1.6rem 0;
+}
+.hands-on h3 {
+  color: #3d5466;
+  font-size: 1.35rem;
+  margin-bottom: 0.9rem;
+  font-family: 'Georgia', serif;
+}
+.hands-on ol,
+.hands-on ul {
+  padding-left: 1.6rem;
+}
+.hands-on li {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #3a2a1a;
+  margin-bottom: 0.5rem;
+}
+
+.reflection-box {
+  background: #f0e8f5;
+  border: 2px solid #a68bc7;
+  border-radius: 16px;
+  padding: 1.5rem 1.7rem;
+  margin: 1.6rem 0;
+}
+.reflection-box h3 {
+  color: #5a3d7a;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Georgia', serif;
+}
+.reflection-box p,
+.reflection-box li {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #3a2a1a;
+}
+.reflection-box ol {
+  padding-left: 1.6rem;
+}
+
+.key-takeaways {
+  background: #fdf8ea;
+  border: 2px dashed #c9a227;
+  border-radius: 14px;
+  padding: 1.2rem 1.5rem;
+  margin-top: 1rem;
+}
+.key-takeaways h4 {
+  color: #5c3d1e;
+  font-family: 'Georgia', serif;
+  margin-bottom: 0.6rem;
+}
+.key-takeaways ul {
+  padding-left: 1.6rem;
+}
+.key-takeaways li {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #3a2a1a;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 700px) {
+  .reading-section { padding: 1.1rem 1.2rem; }
+  .reading-section h3 { font-size: 1.2rem; }
+  .activity-box, .hands-on, .case-study, .reflection-box { padding: 1.1rem 1.2rem; }
+  .opener-box { padding: 1.2rem 1.2rem; }
+  .opener-box .hook { font-size: 1.05rem; }
+}

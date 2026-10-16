@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 — Variables, Logic, and Functions | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Lesson 4 of 40</div>
+  <div class="nav-buttons">
+    <a href="indicator1-lesson3.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator1-lesson5.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>🧠 Lesson 4 — Variables, Logic, and Functions</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 1</span>
+      <span>🗓️ Semester 1 · Midterm</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "When you tap the Calculate button on a calculator app, how does it know what to do?
+        How does it know which numbers you typed? How does it decide what to show?"
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        Behind every app is a set of instructions — logic that tells the app what to do with the
+        user's input. In this lesson, you will learn the three building blocks of app logic:
+        <strong>variables</strong>, <strong>conditions</strong>, and <strong>functions</strong>.
+        Once you understand these, you will be ready to code your first real app.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 4.1 — Lesson Opener</span>
+        <small>Description: A cartoon hand tapping a button on a tablet. Sparks fly from the button, forming a chain of three glowing symbols: a labeled box (variable), a forked path (condition), and a gear (function). Warm bronze and gold tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <p>By the end of this lesson, you will be able to:</p>
+      <ul class="goals-list">
+        <li>Define <strong>variables</strong>, <strong>conditions</strong>, and <strong>functions</strong> in app development.</li>
+        <li>Explain how apps use the <strong>event-driven model</strong> (event → trigger → response).</li>
+        <li>Plan the logic for a simple app using pseudocode or a flow diagram.</li>
+        <li>Apply logic planning to your own app idea.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. Variables — The Memory of an App</h3>
+
+      <p>
+        A <strong>variable</strong> is a named container that stores a value. Think of it as a
+        labeled box. You can put a number, a word, or a true/false value inside, and later ask
+        the app to "look inside the box."
+      </p>
+
+      <p>Example: in a BMI calculator, we need three boxes:</p>
+      <ul>
+        <li><code>weight</code> — stores the number the user typed.</li>
+        <li><code>height</code> — stores the number the user typed.</li>
+        <li><code>bmi</code> — stores the result after calculation.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Why variables matter:</strong> Without variables, the app cannot remember what
+        the user entered. Variables let the app store, update, and reuse data.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 4.2 — Variables as Boxes</span>
+        <small>Description: Three labeled wooden boxes on a parchment shelf. Box 1 says "weight = 60"; Box 2 says "height = 1.65"; Box 3 says "bmi = (empty)". A cartoon hand is about to place a card into Box 3. Warm wood and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — Name the Boxes <span class="time-tag">8 min</span></h4>
+        <p>For each app below, list the <strong>variables</strong> you think it needs. Write at least two per app.</p>
+        <ol>
+          <li>A shopping cart app (adds up prices).</li>
+          <li>A student grade tracker.</li>
+          <li>A weather app.</li>
+          <li>A simple game where you collect coins.</li>
+        </ol>
+        <p>Compare your variables with a partner. Did you use the same names? Why or why not?</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. Conditions — The Decisions of an App</h3>
+
+      <p>
+        A <strong>condition</strong> lets the app make a decision. It asks a yes/no question and
+        chooses what to do based on the answer. Conditions use keywords like <code>if</code>,
+        <code>else if</code>, and <code>else</code>.
+      </p>
+
+      <p>Example: in a BMI app, the app must decide the category:</p>
+      <ul>
+        <li><code>if bmi &lt; 18.5</code> → show "Underweight"</li>
+        <li><code>else if bmi &lt; 25</code> → show "Normal"</li>
+        <li><code>else if bmi &lt; 30</code> → show "Overweight"</li>
+        <li><code>else</code> → show "Obese"</li>
+      </ul>
+
+      <p>Only one branch runs — the app checks the conditions in order until one is true.</p>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> When writing conditions, always think of the <em>edge cases</em>.
+        What if the value is exactly 25? What if it's negative? Good developers cover every
+        possibility.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 4.3 — Conditions as Paths</span>
+        <small>Description: A forked path drawn on a parchment. The starting point asks "bmi < 18.5?" The left fork says "Yes → Underweight"; the right fork leads to another sign "bmi < 25?" with its own forks. A small traveler stands at the start. Warm tan and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Write the Conditions <span class="time-tag">10 min</span></h4>
+        <p>Write the conditions for each scenario. Use <code>if / else if / else</code> style.</p>
+        <ol>
+          <li>An app gives a grade: 80+ = A, 70–79 = B, 60–69 = C, below 60 = F.</li>
+          <li>A food delivery app shows "Free delivery" if the order is over 200 THB, otherwise "Delivery fee 30 THB".</li>
+          <li>A weather app warns: "Very hot" if temperature &gt; 35, "Hot" if 28–35, "Warm" if 20–27, "Cool" otherwise.</li>
+        </ol>
+        <p>Swap your answers with a partner. Check the edge cases together.</p>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. Functions — The Workers of an App</h3>
+
+      <p>
+        A <strong>function</strong> is a named block of code that does one specific job. You
+        "call" a function whenever you need it. This keeps code organized and easy to reuse.
+      </p>
+
+      <p>In a BMI app, we might have two functions:</p>
+      <ul>
+        <li><code>calculate_bmi(weight, height)</code> — returns <code>weight / (height × height)</code>.</li>
+        <li><code>get_category(bmi)</code> — returns "Underweight", "Normal", etc.</li>
+      </ul>
+
+      <div class="callout example">
+        <strong>Example in Python:</strong>
+        <pre style="background:#fdf8ea; padding:0.8rem; border-radius:8px; font-family:monospace; font-size:0.95rem;">
+def calculate_bmi(weight, height):
+    return weight / (height * height)
+
+def get_category(bmi):
+    if bmi &lt; 18.5:
+        return "Underweight"
+    elif bmi &lt; 25:
+        return "Normal"
+    else:
+        return "Overweight"</pre>
+      </div>
+
+      <p>
+        A function should do <strong>one job well</strong>. If a function tries to do too much,
+        it becomes hard to test and fix.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 4.4 — Functions as Gears</span>
+        <small>Description: Three interlocking wooden gears labeled "calculate_bmi", "get_category", and "display_result". Each gear has a small icon and a smile. A hand turns one gear, making the others move. Warm bronze and wood tones.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Write a Function <span class="time-tag">10 min</span></h4>
+        <p>Choose one of these simple apps and write one function it would need:</p>
+        <ul>
+          <li>A tip calculator (given a bill and a tip percentage, compute the tip).</li>
+          <li>A grade averager (given three scores, compute the average).</li>
+          <li>A discount calculator (given a price and a discount %, compute the final price).</li>
+        </ul>
+        <p>Write the function in plain English or Python. Include the function name, its inputs (parameters), and what it returns.</p>
+      </div>
+    </div>
+
+    <!-- EVENT MODEL -->
+    <div class="reading-section">
+      <h3><span>📖</span> 4. The Event-Driven Model — How Apps React</h3>
+
+      <p>
+        Mobile and web apps are <strong>event-driven</strong>. That means the app waits for the
+        user to do something, then reacts. The three parts are:
+      </p>
+
+      <ul>
+        <li><strong>Event</strong> — something the user does (tap, type, swipe, speak).</li>
+        <li><strong>Trigger</strong> — the block that notices the event and starts the response.</li>
+        <li><strong>Response</strong> — what the app does (show a result, play a sound, move a screen).</li>
+      </ul>
+
+      <div class="callout example">
+        <strong>Example:</strong> In a BMI app:<br>
+        <em>Event:</em> user taps "Calculate."<br>
+        <em>Trigger:</em> the Button.Click block fires.<br>
+        <em>Response:</em> the app reads weight and height, calls <code>calculate_bmi</code>,
+        calls <code>get_category</code>, and displays the result.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 4.5 — Event-Driven Flow</span>
+        <small>Description: A three-step cartoon flow on a parchment scroll: (1) finger taps a button (Event), (2) a bell rings (Trigger), (3) a tablet displays a result (Response). Arrows connect them. Warm terracotta and black palette.</small>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — Logic Behind a Tip Calculator</h3>
+
+      <p>A small restaurant wants an app that calculates tips. Here is how the logic is planned.</p>
+
+      <p><strong>Variables:</strong></p>
+      <ul>
+        <li><code>bill</code> — the amount on the receipt.</li>
+        <li><code>tip_percent</code> — the tip percentage (10, 15, or 20).</li>
+        <li><code>tip_amount</code> — the result of the calculation.</li>
+      </ul>
+
+      <p><strong>Function:</strong></p>
+      <pre style="background:#f5ecd8; padding:0.8rem; border-radius:8px; font-family:monospace;">
+def calculate_tip(bill, tip_percent):
+    return bill * (tip_percent / 100)</pre>
+
+      <p><strong>Conditions (to recommend a tip amount):</strong></p>
+      <ul>
+        <li>If service was "Excellent" → 20%</li>
+        <li>If service was "Good" → 15%</li>
+        <li>Otherwise → 10%</li>
+      </ul>
+
+      <p><strong>Event:</strong> user taps "Calculate Tip."</p>
+      <p><strong>Response:</strong> app reads <code>bill</code> and <code>tip_percent</code>, computes <code>tip_amount</code>, and displays the total (bill + tip).</p>
+
+      <p><strong>Reflect:</strong> What would happen if the app allowed a negative tip? How would you prevent that?</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 4.6 — Tip Calculator Logic</span>
+        <small>Description: A parchment flowchart for the tip calculator. Three labeled boxes: bill, tip_percent, tip_amount. A gear icon labeled "calculate_tip" connects the inputs to the output. A small "Calculate Tip" button with a finger tapping it sits at the top. Warm cream and bronze tones.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Plan the Logic for Your App</h3>
+      <p>Using your app idea from Lesson 2, plan its logic in your notebook.</p>
+      <ol>
+        <li><strong>Variables:</strong> List all the values the app must remember (inputs + results).</li>
+        <li><strong>Conditions:</strong> List the decisions the app must make. Write them as <code>if / else if / else</code>.</li>
+        <li><strong>Functions:</strong> List one or two functions the app needs. For each, write its name, inputs, and output.</li>
+        <li><strong>Events:</strong> List the events the user will trigger (button taps, typing, etc.).</li>
+        <li><strong>Flow diagram:</strong> Draw a simple flowchart showing the flow from event → response.</li>
+      </ol>
+      <p>When you finish, exchange notebooks with a partner and check each other's logic. Look for any missing edge cases.</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 4.7 — Logic Plan Template</span>
+        <small>Description: A parchment template with four labeled sections stacked vertically: Variables (box icons), Conditions (forked path icons), Functions (gear icons), Events (lightning icons). Blank lines for writing. A quill and ink pot at the bottom right.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <ol>
+        <li>In your own words, what is a variable?</li>
+        <li>What is the difference between a condition and a function?</li>
+        <li>Describe the three parts of the event-driven model with an example.</li>
+        <li>Which part of app logic do you find hardest to plan?</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li><strong>Variables</strong> store data (like labeled boxes).</li>
+          <li><strong>Conditions</strong> make decisions using if / else if / else.</li>
+          <li><strong>Functions</strong> do one job and can be reused.</li>
+          <li>The <strong>event-driven model</strong> has three parts: Event → Trigger → Response.</li>
+          <li>Planning the logic before coding saves time and prevents bugs.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Complete the logic plan for your app if you did not finish in class.</p>
+      <p>Then write a short Python function (or pseudocode) for one of your app's functions. Test it with at least three inputs and record the outputs in your notebook.</p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your logic plan and flow diagram to the next class."</li>
+        <li>Example: "Review variables, conditions, and functions before Lesson 5."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator1-lesson3.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator1-lesson5.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

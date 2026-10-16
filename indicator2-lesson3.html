@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 — Advanced Data Processing | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Indicator 2 · Lesson 3 of 10</div>
+  <div class="nav-buttons">
+    <a href="indicator2-lesson2.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator2-lesson4.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>📊 Lesson 3 — Advanced Data Processing</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 2</span>
+      <span>🗓️ Semester 1 · Final</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "Imagine two classrooms. In one, every student scored exactly 80. In the other, scores
+        ranged from 40 to 100. Both have an average of 80. So which class is doing better?"
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        The average alone does not tell the whole story. To really understand data, you need
+        more powerful tools: <strong>median</strong>, <strong>mode</strong>, <strong>range</strong>,
+        and <strong>standard deviation</strong>. In this lesson, you will learn how to calculate
+        these statistics and how to use them to interpret your survey results.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.1 — Lesson Opener</span>
+        <small>Description: Two parchment charts side by side. Left chart: five bars all at the same height (80). Right chart: five bars with different heights (40, 60, 80, 90, 100). Both have an "Average = 80" label above them. Warm parchment tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <ul class="goals-list">
+        <li>Calculate advanced statistics: <strong>mean, median, mode, range, and standard deviation</strong>.</li>
+        <li>Use <strong>spreadsheet functions</strong> to process data quickly.</li>
+        <li>Identify <strong>outliers</strong> and understand their impact.</li>
+        <li>Interpret your survey results and draw meaningful conclusions.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. Beyond the Average — The Five Key Statistics</h3>
+
+      <p>Different statistics tell you different things about a dataset. Here are the five you need.</p>
+
+      <h4>1) Mean (Average)</h4>
+      <p>The sum of all values divided by the number of values. It gives the "central" value but is sensitive to outliers.</p>
+
+      <h4>2) Median</h4>
+      <p>The middle value when the data is sorted. If there are two middle values, average them. The median is less affected by outliers than the mean.</p>
+
+      <h4>3) Mode</h4>
+      <p>The value that appears most often. Mode is useful for categories (like favorite snack) where "average" doesn't make sense.</p>
+
+      <h4>4) Range</h4>
+      <p>The maximum value minus the minimum value. Range tells you how spread out the data is.</p>
+
+      <h4>5) Standard Deviation</h4>
+      <p>A measure of how far, on average, each value is from the mean. A small standard deviation means the data is tightly clustered; a large one means it is spread out.</p>
+
+      <div class="callout example">
+        <strong>Example data set:</strong> 3, 5, 5, 7, 9<br>
+        <em>Mean:</em> (3+5+5+7+9)/5 = 29/5 = 5.8<br>
+        <em>Median:</em> the middle value = 5<br>
+        <em>Mode:</em> 5 (appears twice)<br>
+        <em>Range:</em> 9 − 3 = 6<br>
+        <em>Standard deviation:</em> about 2.1
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.2 — Five Statistics</span>
+        <small>Description: Five small parchment cards in a row, each with a statistic name and a small icon: Mean (balance scale), Median (middle dot in a line), Mode (stack of repeating coins), Range (arrow from min to max), Standard Deviation (a bell curve). Warm bronze borders.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — Calculate by Hand <span class="time-tag">8 min</span></h4>
+        <p>For the data set <strong>4, 6, 7, 7, 8, 10, 12</strong>, calculate:</p>
+        <ol>
+          <li>Mean</li>
+          <li>Median</li>
+          <li>Mode</li>
+          <li>Range</li>
+        </ol>
+        <p>Compare with a partner. Which statistic was the easiest to calculate? Which was hardest?</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. Using Spreadsheets to Process Data</h3>
+
+      <p>
+        If you have 100 responses in a survey, calculating everything by hand is slow and
+        error-prone. Spreadsheets (like Google Sheets) do it instantly. Here are the key
+        functions:
+      </p>
+
+      <table>
+        <tr><th>Function</th><th>What It Does</th><th>Example</th></tr>
+        <tr><td><code>=AVERAGE(A2:A100)</code></td><td>Mean</td><td>Average of a range</td></tr>
+        <tr><td><code>=MEDIAN(A2:A100)</code></td><td>Median</td><td>Middle value</td></tr>
+        <tr><td><code>=MODE(A2:A100)</code></td><td>Mode</td><td>Most frequent</td></tr>
+        <tr><td><code>=MAX(A2:A100)-MIN(A2:A100)</code></td><td>Range</td><td>Max minus min</td></tr>
+        <tr><td><code>=STDEV(A2:A100)</code></td><td>Standard deviation</td><td>Spread of data</td></tr>
+      </table>
+
+      <p>
+        You can also use <code>=COUNTIF(A2:A100, ">50")</code> to count how many values are
+        greater than 50.
+      </p>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> Always sort your data before looking at the median. A spreadsheet
+        does it automatically, but if you are working by hand, sorting helps you avoid mistakes.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.3 — Spreadsheet Functions</span>
+        <small>Description: A cartoon tablet screen showing a Google Sheet with columns of data and a sidebar of function names (AVERAGE, MEDIAN, MODE, STDEV). Each function has a small icon. Warm parchment tones.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Write the Formulas <span class="time-tag">10 min</span></h4>
+        <p>Write the spreadsheet formula for each of the following tasks. Assume your data is in cells B2 to B50.</p>
+        <ol>
+          <li>Average of all values.</li>
+          <li>Median.</li>
+          <li>Standard deviation.</li>
+          <li>Range (max minus min).</li>
+          <li>Count how many values are greater than 10.</li>
+          <li>Count how many values are exactly 5.</li>
+        </ol>
+        <p>Compare with a partner. Which formula was the trickiest?</p>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. Outliers and Why They Matter</h3>
+
+      <p>
+        An <strong>outlier</strong> is a value that is very different from the rest of the data.
+        For example, if most students spend 1–3 hours on their phones, but one student reports
+        15 hours, that 15 is an outlier.
+      </p>
+
+      <p>Outliers matter because they can pull the mean far away from the "typical" value.</p>
+
+      <div class="callout example">
+        <strong>Example:</strong> Test scores: 70, 75, 78, 80, 82, 85, 100.<br>
+        Mean = 81.4<br>
+        Median = 80<br>
+        The 100 is an outlier. It pulls the mean up. The median (80) is more representative of
+        the typical score.
+      </div>
+
+      <p>
+        When you find an outlier, do not automatically delete it. Instead, ask: Why is this
+        value so different? Is it a mistake in the data? Or is it real? Sometimes outliers
+        reveal important information.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.4 — Outlier</span>
+        <small>Description: A cartoon dot plot with most values clustered between 70–85 and one dot far to the right at 100. A cartoon magnifying glass hovers over the 100 with a question mark above it. Warm parchment tones.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Spot the Outlier <span class="time-tag">10 min</span></h4>
+        <p>For each data set, identify the outlier (if any). Then explain why it might exist.</p>
+        <ol>
+          <li>Weekly study hours: 5, 6, 7, 6, 8, 7, 30.</li>
+          <li>Class test scores: 60, 65, 70, 75, 80, 85, 90.</li>
+          <li>Number of text messages per day: 20, 25, 30, 22, 200.</li>
+          <li>Shoe sizes in a class: 36, 37, 38, 38, 39, 40, 42.</li>
+        </ol>
+        <p>Share your answers with the class. Discuss: should you remove outliers or keep them?</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — Processing Class Phone Usage Data</h3>
+
+      <p>
+        A Grade 9 class collected survey data on daily phone usage (in hours). Here are the
+        results from 20 students:
+      </p>
+
+      <p style="background:#f5e6c8; padding:0.8rem; border-radius:10px; font-family:monospace; font-size:0.9rem;">
+        2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 10, 15
+      </p>
+
+      <p><strong>Statistics computed in Google Sheets:</strong></p>
+      <ul>
+        <li><strong>Mean:</strong> 6.0 hours</li>
+        <li><strong>Median:</strong> 5.5 hours</li>
+        <li><strong>Mode:</strong> 5 hours</li>
+        <li><strong>Range:</strong> 15 − 2 = 13 hours</li>
+        <li><strong>Standard deviation:</strong> 3.0</li>
+      </ul>
+
+      <p><strong>Interpretation:</strong></p>
+      <ul>
+        <li>The typical student uses their phone for about 5–6 hours per day.</li>
+        <li>The 15-hour value is an outlier — it pulls the mean higher than the median.</li>
+        <li>The wide range (13 hours) tells us that usage varies a lot across students.</li>
+      </ul>
+
+      <p><strong>Reflect:</strong> What decision might this data support? For example, should the
+        school offer a "digital balance" workshop?</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.5 — Class Data Analysis</span>
+        <small>Description: A cartoon tablet screen showing a histogram of phone usage data. Most bars cluster between 3 and 8; one tall bar sits at 15. Below the histogram, a table shows mean, median, mode, range, and standard deviation. Warm parchment tones.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Process Your Own Survey Data</h3>
+      <p>Working in your group, take the survey data you collected in Lesson 2 and process it.</p>
+      <ol>
+        <li>Open your Google Form response sheet in Google Sheets.</li>
+        <li>For each numeric question, calculate: <strong>mean, median, mode, range, and standard deviation</strong>.</li>
+        <li>Create a <strong>frequency table</strong> for one categorical question (e.g., grade level).</li>
+        <li>Create at least <strong>two charts</strong>: a bar chart for categorical data and a histogram for numeric data.</li>
+        <li>Write <strong>three findings</strong> in your notebook. Example: "Most students (68%) spend 3–5 hours on their phone per day."</li>
+        <li>Identify any <strong>outliers</strong> and write one sentence about each.</li>
+      </ol>
+      <p>Save your charts and findings — you will use them in the next lesson to create a data story.</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 3.6 — Data Processing Template</span>
+        <small>Description: A parchment template with two labeled sections. Top: a table with rows for Mean, Median, Mode, Range, SD and blank cells. Bottom: two blank chart frames labeled "Bar Chart" and "Histogram." A quill and ink pot at the bottom right.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <ol>
+        <li>What is the difference between mean and median?</li>
+        <li>Why is standard deviation useful?</li>
+        <li>What is an outlier, and why does it matter?</li>
+        <li>What did your survey data reveal that surprised you?</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li><strong>Mean, median, mode, range, and standard deviation</strong> each tell you something different about your data.</li>
+          <li><strong>Spreadsheets</strong> process large datasets quickly and accurately.</li>
+          <li><strong>Outliers</strong> can pull the mean away from the typical value — check them carefully.</li>
+          <li>Good data processing turns raw numbers into <strong>meaningful insights</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Finish processing your survey data if you did not complete it in class. Bring your charts and findings to Lesson 4.</p>
+      <p>Write a paragraph (5–7 sentences) answering: <em>"What was the most interesting finding from my survey data, and why?"</em></p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your processed data and charts to Lesson 4."</li>
+        <li>Example: "Review how to calculate and interpret standard deviation."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator2-lesson2.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator2-lesson4.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

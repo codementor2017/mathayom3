@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 — Tone Mark Program | M3 Grade 9 Student Textbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-brand"><span class="laurel-icon">🏛️</span> M3 · Lesson 8 of 40</div>
+  <div class="nav-buttons">
+    <a href="indicator1-lesson7.html" class="nav-btn prev-btn">◀ Previous</a>
+    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+    <a href="indicator1-lesson9.html" class="nav-btn next-btn">Next ▶</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="lesson-page">
+
+    <div class="lesson-header">
+      <h2>🗣️ Lesson 8 — Tone Mark Program</h2>
+    </div>
+
+    <div class="lesson-meta-bar">
+      <span>⏱️ 100 minutes</span>
+      <span>📘 Indicator 1</span>
+      <span>🗓️ Semester 1 · Midterm</span>
+      <span>🎓 Grade 9</span>
+    </div>
+
+    <!-- OPENER -->
+    <div class="opener-box">
+      <h3 style="color:#5c3d1e; font-family:Georgia, serif; margin-bottom:0.8rem;">🧭 Lesson Opener</h3>
+      <p class="hook">
+        "Thai has five tones. When you see a Thai syllable, how do you know which tone to use?
+        What if a computer could tell you in one second?"
+      </p>
+      <p style="font-size:1.05rem; line-height:1.75; color:#3a2a1a;">
+        In this lesson, you will combine two of your skills — knowledge of Thai language and
+        knowledge of programming — to build a <strong>tone mark program</strong>. It will read
+        the properties of a syllable and return the tone. This is a real example of how
+        programming can help us understand language more deeply.
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.1 — Lesson Opener</span>
+        <small>Description: A warm parchment banner showing an ancient Thai manuscript on the left and a modern tablet on the right, connected by a golden thread. Between them float five musical notes, each representing one Thai tone. A cartoon student points at the tablet, smiling. Warm gold, cream, and bronze tones.</small>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div class="reading-section">
+      <h3><span>🎯</span> What You Will Learn</h3>
+      <ul class="goals-list">
+        <li>Understand the basic rules of the Thai <strong>tone mark system</strong>.</li>
+        <li>Write a Python program that <strong>determines the tone</strong> of a syllable.</li>
+        <li>Extend the program to handle <strong>all consonant classes</strong>.</li>
+        <li>Test the program with real Thai words.</li>
+      </ul>
+    </div>
+
+    <!-- READING 1 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 1. How Thai Tones Work</h3>
+
+      <p>Thai is a tonal language. Every syllable has one of five tones:</p>
+      <ul>
+        <li><strong>Mid</strong> (สามัญ) — the "flat" tone.</li>
+        <li><strong>Low</strong> (เอก) — the tone marked by ่</li>
+        <li><strong>Falling</strong> (โท) — the tone marked by ้</li>
+        <li><strong>High</strong> (ตรี) — the tone marked by ๊</li>
+        <li><strong>Rising</strong> (จัตวา) — the tone marked by ๋</li>
+      </ul>
+
+      <p>Which tone a syllable takes depends on four things:</p>
+      <ol>
+        <li><strong>Consonant class</strong> — high, mid, or low.</li>
+        <li><strong>Vowel length</strong> — short or long.</li>
+        <li><strong>Final sound</strong> — live (sonorant) or dead (stop).</li>
+        <li><strong>Tone mark</strong> — none, ่, ้, ๊, or ๋.</li>
+      </ol>
+
+      <div class="callout">
+        <strong>Key idea:</strong> The tone mark alone is not enough — you also need to know the
+        consonant class and the syllable structure. That is why this problem is a great fit for
+        a computer program: it has clear rules.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.2 — Five Thai Tones</span>
+        <small>Description: Five cartoon scrolls, each showing a musical note that rises or falls to represent the tone: mid (flat), low (low), falling (drops down), high (up), rising (curves up). The Thai tone mark symbol appears beside each note. Warm gold and cream palette.</small>
+      </div>
+
+      <!-- ACTIVITY 1 -->
+      <div class="activity-box">
+        <h4>Activity 1 — Match the Tone <span class="time-tag">8 min</span></h4>
+        <p>Match each tone mark with its Thai name and its English description.</p>
+        <table>
+          <tr><th>Tone Mark</th><th>Thai Name</th><th>English Tone</th></tr>
+          <tr><td>่</td><td>ไม้เอก</td><td>?</td></tr>
+          <tr><td>้</td><td>ไม้โท</td><td>?</td></tr>
+          <tr><td>๊</td><td>ไม้ตรี</td><td>?</td></tr>
+          <tr><td>๋</td><td>ไม้จัตวา</td><td>?</td></tr>
+          <tr><td>(none)</td><td>—</td><td>?</td></tr>
+        </table>
+        <p>Share your answers with the class.</p>
+      </div>
+    </div>
+
+    <!-- READING 2 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 2. Simplified Rules for Mid-Class Consonants</h3>
+
+      <p>
+        Let's start with the simplest case — <strong>mid-class consonants</strong> (like ก จ ด ต บ ป อ).
+        The rules for these consonants are shown in the table below.
+      </p>
+
+      <table>
+        <tr>
+          <th>Tone Mark</th>
+          <th>Live Syllable</th>
+          <th>Dead Syllable (short vowel)</th>
+        </tr>
+        <tr><td>None</td><td>Mid</td><td>Low</td></tr>
+        <tr><td>่ (mai ek)</td><td>Low</td><td>Falling</td></tr>
+        <tr><td>้ (mai tho)</td><td>Falling</td><td>High</td></tr>
+        <tr><td>๊ (mai tri)</td><td>High</td><td>High</td></tr>
+        <tr><td>๋ (mai jattawa)</td><td>Rising</td><td>Rising</td></tr>
+      </table>
+
+      <p>
+        For example, <em>กา</em> (with mid-class ก, no tone mark, live syllable) has a mid
+        tone. But <em>ก่</em> (with mai ek and live syllable) has a low tone.
+      </p>
+
+      <div class="callout tip">
+        <strong>Tip:</strong> A "live syllable" ends in a long vowel or a sonorant final
+        (m, n, ng, y, w). A "dead syllable" ends in a stop final (p, t, k) or has a short vowel.
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.3 — Tone Rules Table</span>
+        <small>Description: A cartoon table carved on a marble tablet. Three columns: Tone Mark, Live Syllable, Dead Syllable. Five rows: none, ่, ้, ๊, ๋. Each cell has a small colored dot representing the tone color (green for mid, blue for low, red for falling, purple for high, orange for rising). Warm marble and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 2 -->
+      <div class="activity-box">
+        <h4>Activity 2 — Identify the Tone <span class="time-tag">10 min</span></h4>
+        <p>Using the table above, identify the tone for each syllable.</p>
+        <ol>
+          <li>Mid-class, no tone mark, live syllable → ________</li>
+          <li>Mid-class, mai ek, live syllable → ________</li>
+          <li>Mid-class, mai tho, live syllable → ________</li>
+          <li>Mid-class, no tone mark, dead syllable → ________</li>
+          <li>Mid-class, mai ek, dead syllable → ________</li>
+          <li>Mid-class, mai tri, live syllable → ________</li>
+        </ol>
+        <p>Compare with a partner. Which rule was easiest to remember?</p>
+      </div>
+    </div>
+
+    <!-- READING 3 -->
+    <div class="reading-section">
+      <h3><span>📖</span> 3. Writing the Program</h3>
+
+      <p>
+        Now that we know the rules, let's write them as a Python function. Each rule becomes
+        an <code>if</code> statement.
+      </p>
+
+      <pre style="background:#f5e6c8; padding:1rem; border-radius:10px; font-family:monospace; font-size:0.92rem; overflow-x:auto;">
+def tone(consonant_class, vowel_length, final_sound, tone_mark):
+    if consonant_class == "mid":
+        if tone_mark == "none":
+            return "Mid" if final_sound == "live" else "Low"
+        elif tone_mark == "mai_ek":
+            return "Low" if final_sound == "live" else "Falling"
+        elif tone_mark == "mai_tho":
+            return "Falling" if final_sound == "live" else "High"
+        elif tone_mark == "mai_tri":
+            return "High"
+        elif tone_mark == "mai_jattawa":
+            return "Rising"
+    # Add rules for high and low classes later
+    return "Unknown"
+
+# Test cases
+print(tone("mid", "long", "live", "none"))       # Mid
+print(tone("mid", "short", "dead", "mai_ek"))    # Falling
+print(tone("mid", "long", "live", "mai_tho"))    # Falling</pre>
+
+      <p>
+        Notice that we used <strong>nested conditions</strong> (an <code>if</code> inside an
+        <code>if</code>). The first decision is the consonant class, and the second decision is
+        the tone mark.
+      </p>
+
+      <div class="callout example">
+        <strong>How to read this code:</strong> "If the consonant class is mid, then check the
+        tone mark. If there is no mark, the tone depends on whether the syllable is live or
+        dead. If the mark is mai ek, the tone is low or falling..."
+      </div>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.4 — Code on Papyrus</span>
+        <small>Description: A cartoon papyrus scroll showing the Python code for the tone function. Nested if-blocks are drawn as a small flowchart beside the code. Colored styluses and a small ink pot sit at the bottom of the scroll. Warm tan and bronze tones.</small>
+      </div>
+
+      <!-- ACTIVITY 3 -->
+      <div class="activity-box">
+        <h4>Activity 3 — Add the High-Class Rules <span class="time-tag">10 min</span></h4>
+        <p>Below are the simplified rules for high-class consonants (like ข ฉ ฐ ถ ผ ฝ ศ ษ ส ห).</p>
+        <table>
+          <tr><th>Tone Mark</th><th>Live Syllable</th><th>Dead Syllable</th></tr>
+          <tr><td>None</td><td>Rising</td><td>Low</td></tr>
+          <tr><td>่ (mai ek)</td><td>Low</td><td>Low</td></tr>
+          <tr><td>้ (mai tho)</td><td>Falling</td><td>Falling</td></tr>
+        </table>
+        <p>In your notebook, add these rules to the function. Write them as Python code following the same style as the mid-class rules.</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <div class="case-study">
+      <h3>🔍 Case Study — Testing the Program with Real Thai Words</h3>
+
+      <p>
+        Let's test our tone function with real Thai words. Here are three examples.
+      </p>
+
+      <p><strong>Word 1: กา (kaa, "crow")</strong></p>
+      <ul>
+        <li>Consonant: ก (mid class).</li>
+        <li>Vowel: long.</li>
+        <li>Final: live (no stop).</li>
+        <li>Tone mark: none.</li>
+        <li>Expected tone: <strong>Mid</strong>.</li>
+      </ul>
+
+      <p><strong>Word 2: กว่า (kwaa, "more than")</strong></p>
+      <ul>
+        <li>Consonant: ก (mid class).</li>
+        <li>Vowel: long.</li>
+        <li>Final: live.</li>
+        <li>Tone mark: ่ (mai ek).</li>
+        <li>Expected tone: <strong>Low</strong>.</li>
+      </ul>
+
+      <p><strong>Word 3: ก้า (kaa, "a kind of tree")</strong></p>
+      <ul>
+        <li>Consonant: ก (mid class).</li>
+        <li>Vowel: long.</li>
+        <li>Final: live.</li>
+        <li>Tone mark: ้ (mai tho).</li>
+        <li>Expected tone: <strong>Falling</strong>.</li>
+      </ul>
+
+      <p>
+        Now, run the program with these inputs and check the outputs. Do they match your
+        expectations? If not, look for a mistake in the rules.
+      </p>
+
+      <p>
+        <strong>Reflect:</strong> Which rule is the hardest to remember? Which rule do you think
+        causes the most mistakes for learners?
+      </p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.5 — Testing with Thai Words</span>
+        <small>Description: Three small parchment panels, each showing a Thai word written in a decorative script: กา, กว่า, ก้า. Below each word, a small labeled box shows the expected tone (Mid, Low, Falling) with a colored dot. Warm gold and bronze tones.</small>
+      </div>
+    </div>
+
+    <!-- HANDS-ON -->
+    <div class="hands-on">
+      <h3>🛠️ Hands-On Task — Extend and Test the Program</h3>
+      <p>In your notebook or code editor, follow these steps.</p>
+      <ol>
+        <li><strong>Add high-class rules:</strong> Extend the tone function to handle high-class consonants (ข ฉ ฐ ถ ผ ฝ ศ ษ ส ห).</li>
+        <li><strong>Add low-class rules:</strong> Extend the function to handle low-class consonants (ค ง ช ซ ญ ฑ ฒ น ฟ ภ ม ย ร ล ว ฬ ฮ).</li>
+        <li><strong>Test with five real Thai words:</strong> Choose five words and write down:
+          <ul>
+            <li>The word.</li>
+            <li>The consonant class, vowel length, final sound, and tone mark.</li>
+            <li>The expected tone.</li>
+            <li>The tone your program returned.</li>
+          </ul>
+        </li>
+        <li><strong>Fix any bugs:</strong> If your program's output doesn't match your expected tone, debug the code.</li>
+      </ol>
+      <p>When finished, exchange your program with a partner and check each other's work. Did your programs return the same tone for the same words?</p>
+
+      <div class="image-placeholder">
+        <span class="img-label">Image 8.6 — Extended Tone Program</span>
+        <small>Description: A papyrus scroll showing the extended tone function in stylus writing. Small colored tabs on the side mark the sections for mid-class, high-class, and low-class rules. A quill pen rests at the bottom. Warm parchment tones.</small>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-box">
+      <h3>📝 Reflection &amp; Review</h3>
+      <ol>
+        <li>What are the four things that determine a syllable's tone?</li>
+        <li>Why does the tone mark alone not tell you the tone?</li>
+        <li>How did writing the rules as code help you understand them better?</li>
+        <li>What was the most difficult rule to code?</li>
+      </ol>
+
+      <div class="key-takeaways">
+        <h4>🔑 Key Takeaways</h4>
+        <ul>
+          <li>Thai tones depend on four things: <strong>consonant class, vowel length, final sound, and tone mark</strong>.</li>
+          <li>A computer can determine tones using clear if / else rules.</li>
+          <li>Testing with real words is the best way to catch mistakes.</li>
+          <li>Programming helps us understand language rules more deeply.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="reading-section">
+      <h3><span>🏠</span> Homework</h3>
+      <p>Add <strong>three more rules</strong> to your tone mark program — for example, rules for syllables with no tone mark but with a short vowel.</p>
+      <p>Test with five additional Thai words. Bring your code and test results to the next class.</p>
+    </div>
+
+    <div class="teacher-announce">
+      <h4>📜 Teacher Announcements</h4>
+      <ul>
+        <li>Write your announcement here using &lt;li&gt; tags.</li>
+        <li>Example: "Bring your extended tone program to Lesson 9."</li>
+        <li>Example: "Review the four factors that determine Thai tones."</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="indicator1-lesson7.html" class="nav-btn prev-btn">◀ Previous</a>
+  <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+  <a href="indicator1-lesson9.html" class="nav-btn next-btn">Next ▶</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
